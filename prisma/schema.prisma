@@ -1,0 +1,367 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// -----------------------------------------------------------------
+// SPECIALIZATION
+// -----------------------------------------------------------------
+model Specialization {
+  id          String   @id @default(cuid())
+  name        String   @unique
+  description String?
+  doctors     Doctor[]
+}
+
+// -----------------------------------------------------------------
+// CLINIC
+// -----------------------------------------------------------------
+model Clinic {
+  id        String @id @default(cuid())
+  name      String
+  address   String
+  area      String
+  city      String
+  pincode   String
+  latitude  Float
+  longitude Float
+  phone     String
+  email     String
+  qrToken   String @unique @default(cuid())
+
+  logoUrl       String?
+  coverImageUrl String?
+  photoUrls     String[]
+
+  parentClinicId String?
+  parentClinic   Clinic?  @relation("ClinicBranches", fields: [parentClinicId], references: [id])
+  branches       Clinic[] @relation("ClinicBranches")
+
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  doctors       Doctor[]
+  faqs          FAQ[]
+  staffUsers    StaffUser[]
+  conversations Conversation[]
+
+  @@index([latitude, longitude])
+  @@index([city, area])
+}
+
+enum DoctorStatus {
+  AVAILABLE
+  WITH_PATIENT
+  OFFLINE
+}
+
+model Doctor {
+  id                     String   @id @default(cuid())
+  clinicId               String
+  specializationId       String
+  name                   String
+  qualification          String
+  experienceYears        Int
+  consultationFee        Int
+  languages              String[]
+  bio                    String
+  slotDurationMinutes    Int
+  avgConsultationMinutes Int
+
+  profileImageUrl String?
+  coverImageUrl   String?
+
+  avgRating   Float @default(0)
+  reviewCount Int   @default(0)
+
+  isAvailable   Boolean      @default(true)
+  currentStatus DoctorStatus @default(OFFLINE)
+
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  clinic         Clinic         @relation(fields: [clinicId], references: [id], onDelete: Restrict)
+  specialization Specialization @relation(fields: [specializationId], references: [id], onDelete: Restrict)
+  availability   Availability[]
+  leaves         DoctorLeave[]
+  appointments   Appointment[]
+  reviews        Review[]
+
+  @@index([clinicId])
+  @@index([specializationId])
+  @@index([avgRating])
+}
+
+model Availability {
+  id                  String @id @default(cuid())
+  doctorId            String
+  dayOfWeek           Int
+  startTime           String
+  endTime             String
+  slotDurationMinutes Int
+
+  doctor Doctor @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@index([doctorId, dayOfWeek])
+}
+
+enum LeaveType {
+  FULL_DAY
+  PARTIAL_DAY
+}
+
+model DoctorLeave {
+  id              String    @id @default(cuid())
+  doctorId        String
+  dateFrom        DateTime  @db.Date
+  dateTo          DateTime  @db.Date
+  leaveType       LeaveType @default(FULL_DAY)
+  customStartTime String?
+  customEndTime   String?
+  reason          String?
+  createdAt       DateTime  @default(now())
+
+  doctor Doctor @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+
+  @@index([doctorId, dateFrom, dateTo])
+}
+
+model FAQ {
+  id       String @id @default(cuid())
+  clinicId String
+  question String
+  answer   String
+
+  clinic Clinic @relation(fields: [clinicId], references: [id], onDelete: Cascade)
+
+  @@index([clinicId])
+}
+
+enum StaffRole {
+  ADMIN
+  RECEPTION
+}
+
+model StaffUser {
+  id          String    @id @default(cuid())
+  clinicId    String
+  clerkUserId String    @unique
+  name        String
+  email       String    @unique
+  role        StaffRole @default(RECEPTION)
+  isActive    Boolean   @default(true)
+  createdAt   DateTime  @default(now())
+
+  clinic                Clinic          @relation(fields: [clinicId], references: [id], onDelete: Restrict)
+  queueAuditActions     QueueAuditLog[]
+  assignedConversations Conversation[]
+  sentMessages          Message[]
+
+  @@index([clinicId])
+}
+
+model Patient {
+  id          String   @id @default(cuid())
+  clerkUserId String   @unique
+  name        String
+  email       String   @unique
+  phone       String
+  createdAt   DateTime @default(now())
+
+  appointments  Appointment[]
+  conversations Conversation[]
+  reviews       Review[]
+}
+
+enum AppointmentType {
+  SCHEDULED
+  WALK_IN
+}
+
+enum AppointmentStatus {
+  confirmed
+  cancelled
+  completed
+  no_show
+  in_consultation
+}
+
+model Appointment {
+  id        String            @id @default(cuid())
+  patientId String
+  doctorId  String
+  type      AppointmentType
+  status    AppointmentStatus
+  date      DateTime          @db.Date
+  startTime String?
+  createdAt DateTime          @default(now())
+
+  patient    Patient     @relation(fields: [patientId], references: [id], onDelete: Restrict)
+  doctor     Doctor      @relation(fields: [doctorId], references: [id], onDelete: Restrict)
+  queueEntry QueueEntry?
+  review     Review?
+
+  @@index([doctorId, date])
+  @@index([patientId])
+}
+
+enum QueueStatus {
+  waiting
+  called
+  in_consultation
+  completed
+  skipped
+}
+
+model QueueEntry {
+  id            String   @id @default(cuid())
+  appointmentId String   @unique
+  doctorId      String
+  queueDate     DateTime @db.Date
+
+  queueNumber Int
+  position    Int
+
+  estimatedWaitMinutes Int?
+
+  status                QueueStatus @default(waiting)
+  joinedAt              DateTime
+  calledAt              DateTime?
+  consultationStartedAt DateTime?
+  consultationEndedAt   DateTime?
+  updatedAt             DateTime    @updatedAt
+
+  appointment Appointment     @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+  auditLogs   QueueAuditLog[]
+
+  @@unique([doctorId, queueDate, position])
+  @@unique([doctorId, queueDate, queueNumber])
+  @@index([doctorId, queueDate, status])
+}
+
+enum QueueAction {
+  CALLED
+  SKIPPED
+  REORDERED
+  COMPLETED
+  CANCELLED
+}
+
+model QueueAuditLog {
+  id               String      @id @default(cuid())
+  queueEntryId     String
+  staffUserId      String?
+  action           QueueAction
+  reason           String?
+  previousPosition Int?
+  newPosition      Int?
+  createdAt        DateTime    @default(now())
+
+  queueEntry QueueEntry @relation(fields: [queueEntryId], references: [id], onDelete: Cascade)
+  staffUser  StaffUser? @relation(fields: [staffUserId], references: [id], onDelete: SetNull)
+
+  @@index([queueEntryId])
+}
+
+enum ConversationChannel {
+  WEB
+  WHATSAPP
+  VOICE
+  APP
+}
+
+enum ConversationStatus {
+  ACTIVE
+  RESOLVED
+  ESCALATED
+  ABANDONED
+}
+
+model Conversation {
+  id        String              @id @default(cuid())
+  patientId String
+  clinicId  String
+  channel   ConversationChannel @default(WEB)
+  status    ConversationStatus  @default(ACTIVE)
+
+  assignedStaffId String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  patient       Patient    @relation(fields: [patientId], references: [id], onDelete: Restrict)
+  clinic        Clinic     @relation(fields: [clinicId], references: [id], onDelete: Restrict)
+  assignedStaff StaffUser? @relation(fields: [assignedStaffId], references: [id], onDelete: SetNull)
+  messages      Message[]
+
+  @@index([patientId])
+  @@index([clinicId, status])
+}
+
+enum MessageSender {
+  PATIENT
+  AI
+  HUMAN_STAFF
+}
+
+model Message {
+  id             String        @id @default(cuid())
+  conversationId String
+  sender         MessageSender
+  senderStaffId  String?
+  content        String
+  agentName      String?
+  toolCalled     String?
+  metadata       Json?
+  createdAt      DateTime      @default(now())
+
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  senderStaff  StaffUser?   @relation(fields: [senderStaffId], references: [id], onDelete: SetNull)
+  aiLogs       AILog[]
+
+  @@index([conversationId, createdAt])
+}
+
+model Review {
+  id            String   @id @default(cuid())
+  patientId     String
+  doctorId      String
+  appointmentId String   @unique
+  rating        Int
+  reviewText    String?
+  createdAt     DateTime @default(now())
+
+  patient     Patient     @relation(fields: [patientId], references: [id], onDelete: Restrict)
+  doctor      Doctor      @relation(fields: [doctorId], references: [id], onDelete: Restrict)
+  appointment Appointment @relation(fields: [appointmentId], references: [id], onDelete: Cascade)
+
+  @@index([doctorId])
+}
+
+model AILog {
+  id               String   @id @default(cuid())
+  messageId        String?
+  agentName        String
+  trigger          String
+  actionTaken      String
+  dbFunctionCalled String?
+  success          Boolean
+  executionTimeMs  Int
+  errorMessage     String?
+  createdAt        DateTime @default(now())
+
+  message Message? @relation(fields: [messageId], references: [id], onDelete: SetNull)
+
+  @@index([agentName, createdAt])
+  @@index([messageId])
+}
