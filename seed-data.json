@@ -1,0 +1,6816 @@
+{
+  "meta": {
+    "generatedAt": "2026-08-07T00:00:00",
+    "city": "Mumbai",
+    "note": "Clinic names, addresses, areas, and pincodes are real, publicly listed Mumbai hospitals. Doctor names, fees, ratings, bios, schedules, FAQs, patients, appointments, and queue data are SYNTHETIC DEMO DATA generated for development/demo purposes only -- not real doctors, fees, or patients."
+  },
+  "specializations": [
+    {
+      "id": "spec_gp",
+      "name": "General Physician",
+      "description": "Primary care, common illnesses, general checkups"
+    },
+    {
+      "id": "spec_derm",
+      "name": "Dermatologist",
+      "description": "Skin, hair, and nail conditions"
+    },
+    {
+      "id": "spec_dent",
+      "name": "Dentist",
+      "description": "Oral and dental health"
+    },
+    {
+      "id": "spec_ent",
+      "name": "ENT Specialist",
+      "description": "Ear, nose, and throat conditions"
+    },
+    {
+      "id": "spec_ortho",
+      "name": "Orthopedic",
+      "description": "Bones, joints, and musculoskeletal system"
+    },
+    {
+      "id": "spec_cardio",
+      "name": "Cardiologist",
+      "description": "Heart and cardiovascular conditions"
+    },
+    {
+      "id": "spec_ped",
+      "name": "Pediatrician",
+      "description": "Child health and development"
+    },
+    {
+      "id": "spec_gyn",
+      "name": "Gynecologist",
+      "description": "Women's reproductive health"
+    },
+    {
+      "id": "spec_neuro",
+      "name": "Neurologist",
+      "description": "Brain and nervous system conditions"
+    },
+    {
+      "id": "spec_ophtho",
+      "name": "Ophthalmologist",
+      "description": "Eye care and vision"
+    },
+    {
+      "id": "spec_psych",
+      "name": "Psychiatrist",
+      "description": "Mental health conditions"
+    }
+  ],
+  "clinics": [
+    {
+      "id": "clinic_01",
+      "name": "Lilavati Hospital and Research Centre",
+      "address": "A-791, Bandra Reclamation",
+      "area": "Bandra West",
+      "pincode": "400050",
+      "lat": 19.0509,
+      "lng": 72.8296,
+      "phone": "+91-22-2675-1000",
+      "email": "info.demo@lilavatihospital.example"
+    },
+    {
+      "id": "clinic_02",
+      "name": "Kokilaben Dhirubhai Ambani Hospital",
+      "address": "Rao Saheb Achutrao Patwardhan Marg, Four Bungalows",
+      "area": "Andheri West",
+      "pincode": "400053",
+      "lat": 19.1306,
+      "lng": 72.8259,
+      "phone": "+91-22-4269-6969",
+      "email": "info.demo@kokilabenhospital.example"
+    },
+    {
+      "id": "clinic_03",
+      "name": "Nanavati Max Super Speciality Hospital",
+      "address": "S.V. Road",
+      "area": "Vile Parle West",
+      "pincode": "400056",
+      "lat": 19.0996,
+      "lng": 72.8438,
+      "phone": "+91-22-2626-7500",
+      "email": "info.demo@nanavatimax.example"
+    },
+    {
+      "id": "clinic_04",
+      "name": "Hiranandani Hospital",
+      "address": "Hill Side Avenue, Hiranandani Gardens",
+      "area": "Powai",
+      "pincode": "400076",
+      "lat": 19.1176,
+      "lng": 72.906,
+      "phone": "+91-22-2576-3300",
+      "email": "info.demo@hiranandanihospital.example"
+    },
+    {
+      "id": "clinic_05",
+      "name": "S. L. Raheja Hospital (A Fortis Associate)",
+      "address": "Raheja Rugnalaya Marg",
+      "area": "Mahim West",
+      "pincode": "400016",
+      "lat": 19.041,
+      "lng": 72.8397,
+      "phone": "+91-22-6767-3333",
+      "email": "info.demo@rahejahospital.example"
+    },
+    {
+      "id": "clinic_06",
+      "name": "P. D. Hinduja Hospital and Medical Research Centre",
+      "address": "Veer Savarkar Marg",
+      "area": "Mahim",
+      "pincode": "400016",
+      "lat": 19.0389,
+      "lng": 72.841,
+      "phone": "+91-22-2445-2575",
+      "email": "info.demo@hindujahospital.example"
+    },
+    {
+      "id": "clinic_07",
+      "name": "SevenHills Hospital",
+      "address": "SevenHills Health City, Marol Maroshi Road",
+      "area": "Andheri East",
+      "pincode": "400059",
+      "lat": 19.1191,
+      "lng": 72.8827,
+      "phone": "+91-22-6767-6767",
+      "email": "info.demo@sevenhillshospital.example"
+    },
+    {
+      "id": "clinic_08",
+      "name": "Holy Family Hospital",
+      "address": "St. Andrew's Road",
+      "area": "Bandra West",
+      "pincode": "400050",
+      "lat": 19.06,
+      "lng": 72.832,
+      "phone": "+91-22-2642-2255",
+      "email": "info.demo@holyfamilyhospital.example"
+    },
+    {
+      "id": "clinic_09",
+      "name": "Jaslok Hospital & Research Centre",
+      "address": "15, Dr. G. Deshmukh Marg, Pedder Road",
+      "area": "Pedder Road",
+      "pincode": "400026",
+      "lat": 18.9686,
+      "lng": 72.809,
+      "phone": "+91-22-6657-3333",
+      "email": "info.demo@jaslokhospital.example"
+    },
+    {
+      "id": "clinic_10",
+      "name": "Breach Candy Hospital Trust",
+      "address": "60-A, Bhulabhai Desai Road",
+      "area": "Breach Candy",
+      "pincode": "400026",
+      "lat": 18.9686,
+      "lng": 72.8054,
+      "phone": "+91-22-2367-1888",
+      "email": "info.demo@breachcandyhospital.example"
+    },
+    {
+      "id": "clinic_11",
+      "name": "Saifee Hospital",
+      "address": "15/17, Maharshi Karve Marg",
+      "area": "Charni Road",
+      "pincode": "400004",
+      "lat": 18.9525,
+      "lng": 72.8182,
+      "phone": "+91-22-6757-0111",
+      "email": "info.demo@saifeehospital.example"
+    },
+    {
+      "id": "clinic_12",
+      "name": "Fortis Hospital, Mulund",
+      "address": "Mulund Goregaon Link Road",
+      "area": "Mulund West",
+      "pincode": "400078",
+      "lat": 19.1726,
+      "lng": 72.9425,
+      "phone": "+91-22-6799-4444",
+      "email": "info.demo@fortismulund.example"
+    },
+    {
+      "id": "clinic_13",
+      "name": "Wockhardt Hospital, Mumbai Central",
+      "address": "1877, Dr Anandrao Nair Road, Agripada",
+      "area": "Mumbai Central",
+      "pincode": "400011",
+      "lat": 18.975,
+      "lng": 72.8258,
+      "phone": "+91-22-6178-4444",
+      "email": "info.demo@wockhardtmumbaicentral.example"
+    },
+    {
+      "id": "clinic_14",
+      "name": "Nakshatra Hospital",
+      "address": "Plot No. 39, Main Gulmohar Road",
+      "area": "Andheri West",
+      "pincode": "400049",
+      "lat": 19.1364,
+      "lng": 72.8296,
+      "phone": "+91-22-2674-1111",
+      "email": "info.demo@nakshatrahospital.example"
+    },
+    {
+      "id": "clinic_15",
+      "name": "Global Hospital",
+      "address": "35, Dr E Borges Road",
+      "area": "Parel",
+      "pincode": "400012",
+      "lat": 19.0037,
+      "lng": 72.842,
+      "phone": "+91-22-6767-9999",
+      "email": "info.demo@globalhospitalmumbai.example"
+    }
+  ],
+  "doctors": [
+    {
+      "id": "doc_01",
+      "clinicId": "clinic_01",
+      "specializationId": "spec_neuro",
+      "name": "Dr. Deepika Nair",
+      "qualification": "MBBS, MD, DM (Neurology)",
+      "experienceYears": 26,
+      "consultationFee": 500,
+      "avgRating": 4.2,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Marathi"
+      ],
+      "bio": "Specializes in neurologist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_02",
+      "clinicId": "clinic_02",
+      "specializationId": "spec_derm",
+      "name": "Dr. Shreya Pillai",
+      "qualification": "MBBS, DVD",
+      "experienceYears": 24,
+      "consultationFee": 900,
+      "avgRating": 4.3,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Kannada"
+      ],
+      "bio": "Specializes in dermatologist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_03",
+      "clinicId": "clinic_03",
+      "specializationId": "spec_cardio",
+      "name": "Dr. Karan Rao",
+      "qualification": "MBBS, MD, DM (Cardiology)",
+      "experienceYears": 9,
+      "consultationFee": 1200,
+      "avgRating": 4.5,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Marathi"
+      ],
+      "bio": "Specializes in cardiologist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_04",
+      "clinicId": "clinic_04",
+      "specializationId": "spec_gp",
+      "name": "Dr. Aarti Joshi",
+      "qualification": "MBBS, DNB (General Medicine)",
+      "experienceYears": 6,
+      "consultationFee": 700,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Kannada"
+      ],
+      "bio": "Combines clinical expertise in general physician with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_05",
+      "clinicId": "clinic_05",
+      "specializationId": "spec_cardio",
+      "name": "Dr. Kavita Joshi",
+      "qualification": "MBBS, MD (Medicine), DNB (Cardiology)",
+      "experienceYears": 8,
+      "consultationFee": 700,
+      "avgRating": 4.8,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali",
+        "Tamil"
+      ],
+      "bio": "Has treated thousands of patients over a 8-year career in cardiologist.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_06",
+      "clinicId": "clinic_06",
+      "specializationId": "spec_ophtho",
+      "name": "Dr. Pranav Khan",
+      "qualification": "MBBS, DOMS",
+      "experienceYears": 6,
+      "consultationFee": 400,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Kannada"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in ophthalmologist.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_07",
+      "clinicId": "clinic_07",
+      "specializationId": "spec_ped",
+      "name": "Dr. Siddharth Verma",
+      "qualification": "MBBS, DCH",
+      "experienceYears": 23,
+      "consultationFee": 1200,
+      "avgRating": 4.6,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_08",
+      "clinicId": "clinic_08",
+      "specializationId": "spec_ophtho",
+      "name": "Dr. Amit Reddy",
+      "qualification": "MBBS, MS (Ophthalmology)",
+      "experienceYears": 9,
+      "consultationFee": 1200,
+      "avgRating": 4.2,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_09",
+      "clinicId": "clinic_09",
+      "specializationId": "spec_dent",
+      "name": "Dr. Rajesh Kapoor",
+      "qualification": "BDS",
+      "experienceYears": 28,
+      "consultationFee": 600,
+      "avgRating": 4.6,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "bio": "Specializes in dentist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_10",
+      "clinicId": "clinic_10",
+      "specializationId": "spec_neuro",
+      "name": "Dr. Ritu Rao",
+      "qualification": "MBBS, DNB (Neurology)",
+      "experienceYears": 5,
+      "consultationFee": 700,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Specializes in neurologist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_11",
+      "clinicId": "clinic_11",
+      "specializationId": "spec_ophtho",
+      "name": "Dr. Rajesh Chatterjee",
+      "qualification": "MBBS, MS (Ophthalmology)",
+      "experienceYears": 19,
+      "consultationFee": 1500,
+      "avgRating": 4.3,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_12",
+      "clinicId": "clinic_12",
+      "specializationId": "spec_gp",
+      "name": "Dr. Tanvi Agarwal",
+      "qualification": "MBBS, MD (Internal Medicine)",
+      "experienceYears": 15,
+      "consultationFee": 1200,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Has treated thousands of patients over a 15-year career in general physician.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_13",
+      "clinicId": "clinic_13",
+      "specializationId": "spec_neuro",
+      "name": "Dr. Kunal Sharma",
+      "qualification": "MBBS, MD, DM (Neurology)",
+      "experienceYears": 22,
+      "consultationFee": 1500,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Specializes in neurologist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_14",
+      "clinicId": "clinic_14",
+      "specializationId": "spec_gp",
+      "name": "Dr. Vikram Mehta",
+      "qualification": "MBBS, DNB (General Medicine)",
+      "experienceYears": 31,
+      "consultationFee": 900,
+      "avgRating": 4.3,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Kannada"
+      ],
+      "bio": "Has treated thousands of patients over a 31-year career in general physician.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_15",
+      "clinicId": "clinic_15",
+      "specializationId": "spec_gyn",
+      "name": "Dr. Vivek Fernandes",
+      "qualification": "MBBS, MD (Obstetrics & Gynecology)",
+      "experienceYears": 19,
+      "consultationFee": 700,
+      "avgRating": 4.8,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Marathi"
+      ],
+      "bio": "Combines clinical expertise in gynecologist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_16",
+      "clinicId": "clinic_01",
+      "specializationId": "spec_psych",
+      "name": "Dr. Fatima Reddy",
+      "qualification": "MBBS, DPM",
+      "experienceYears": 18,
+      "consultationFee": 400,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_17",
+      "clinicId": "clinic_02",
+      "specializationId": "spec_ent",
+      "name": "Dr. Suresh Nair",
+      "qualification": "MBBS, DLO",
+      "experienceYears": 10,
+      "consultationFee": 1500,
+      "avgRating": 4.6,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ],
+      "bio": "Has treated thousands of patients over a 10-year career in ent specialist.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_18",
+      "clinicId": "clinic_03",
+      "specializationId": "spec_psych",
+      "name": "Dr. Deepak D'Souza",
+      "qualification": "MBBS, MD (Psychiatry)",
+      "experienceYears": 7,
+      "consultationFee": 400,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Has treated thousands of patients over a 7-year career in psychiatrist.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_19",
+      "clinicId": "clinic_04",
+      "specializationId": "spec_dent",
+      "name": "Dr. Ayesha Khan",
+      "qualification": "BDS, MDS (Orthodontics)",
+      "experienceYears": 10,
+      "consultationFee": 1000,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Marathi",
+        "Tamil"
+      ],
+      "bio": "Combines clinical expertise in dentist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_20",
+      "clinicId": "clinic_05",
+      "specializationId": "spec_ortho",
+      "name": "Dr. Fatima Banerjee",
+      "qualification": "MBBS, D.Ortho",
+      "experienceYears": 27,
+      "consultationFee": 1500,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Gujarati"
+      ],
+      "bio": "Has treated thousands of patients over a 27-year career in orthopedic.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_21",
+      "clinicId": "clinic_06",
+      "specializationId": "spec_ped",
+      "name": "Dr. Vivek D'Souza",
+      "qualification": "MBBS, MD (Pediatrics)",
+      "experienceYears": 5,
+      "consultationFee": 900,
+      "avgRating": 4.2,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Marathi"
+      ],
+      "bio": "Has treated thousands of patients over a 5-year career in pediatrician.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_22",
+      "clinicId": "clinic_07",
+      "specializationId": "spec_psych",
+      "name": "Dr. Rakesh Patil",
+      "qualification": "MBBS, MD (Psychiatry)",
+      "experienceYears": 25,
+      "consultationFee": 700,
+      "avgRating": 4.5,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Combines clinical expertise in psychiatrist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_23",
+      "clinicId": "clinic_08",
+      "specializationId": "spec_ophtho",
+      "name": "Dr. Shreya Nair",
+      "qualification": "MBBS, DOMS",
+      "experienceYears": 25,
+      "consultationFee": 900,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Kannada"
+      ],
+      "bio": "Combines clinical expertise in ophthalmologist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_24",
+      "clinicId": "clinic_09",
+      "specializationId": "spec_gp",
+      "name": "Dr. Sneha Sharma",
+      "qualification": "MBBS",
+      "experienceYears": 18,
+      "consultationFee": 1800,
+      "avgRating": 5.0,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Has treated thousands of patients over a 18-year career in general physician.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_25",
+      "clinicId": "clinic_10",
+      "specializationId": "spec_cardio",
+      "name": "Dr. Kavita Kapoor",
+      "qualification": "MBBS, MD (Medicine), DNB (Cardiology)",
+      "experienceYears": 32,
+      "consultationFee": 500,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Gujarati"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in cardiologist.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_26",
+      "clinicId": "clinic_11",
+      "specializationId": "spec_dent",
+      "name": "Dr. Rashmi Agarwal",
+      "qualification": "BDS",
+      "experienceYears": 20,
+      "consultationFee": 400,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_27",
+      "clinicId": "clinic_12",
+      "specializationId": "spec_gp",
+      "name": "Dr. Arjun D'Souza",
+      "qualification": "MBBS",
+      "experienceYears": 8,
+      "consultationFee": 800,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Gujarati"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_28",
+      "clinicId": "clinic_13",
+      "specializationId": "spec_ent",
+      "name": "Dr. Shreya Mehta",
+      "qualification": "MBBS, MS (ENT)",
+      "experienceYears": 6,
+      "consultationFee": 2000,
+      "avgRating": 4.5,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_29",
+      "clinicId": "clinic_14",
+      "specializationId": "spec_gyn",
+      "name": "Dr. Imran Joshi",
+      "qualification": "MBBS, MD (Obstetrics & Gynecology)",
+      "experienceYears": 9,
+      "consultationFee": 1200,
+      "avgRating": 4.6,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Specializes in gynecologist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_30",
+      "clinicId": "clinic_15",
+      "specializationId": "spec_gyn",
+      "name": "Dr. Karan Mehta",
+      "qualification": "MBBS, DGO",
+      "experienceYears": 30,
+      "consultationFee": 900,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Gujarati",
+        "Marathi"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_31",
+      "clinicId": "clinic_01",
+      "specializationId": "spec_ophtho",
+      "name": "Dr. Nikhil Nair",
+      "qualification": "MBBS, MS (Ophthalmology)",
+      "experienceYears": 25,
+      "consultationFee": 700,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali",
+        "Gujarati"
+      ],
+      "bio": "Has treated thousands of patients over a 25-year career in ophthalmologist.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_32",
+      "clinicId": "clinic_02",
+      "specializationId": "spec_ent",
+      "name": "Dr. Manish Sharma",
+      "qualification": "MBBS, MS (ENT)",
+      "experienceYears": 9,
+      "consultationFee": 900,
+      "avgRating": 4.8,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ],
+      "bio": "Specializes in ent specialist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_33",
+      "clinicId": "clinic_03",
+      "specializationId": "spec_ortho",
+      "name": "Dr. Anjali Khan",
+      "qualification": "MBBS, MS (Orthopedics)",
+      "experienceYears": 11,
+      "consultationFee": 700,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ],
+      "bio": "Has treated thousands of patients over a 11-year career in orthopedic.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_34",
+      "clinicId": "clinic_04",
+      "specializationId": "spec_derm",
+      "name": "Dr. Farhan Nair",
+      "qualification": "MBBS, DVD",
+      "experienceYears": 16,
+      "consultationFee": 900,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in dermatologist.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_35",
+      "clinicId": "clinic_05",
+      "specializationId": "spec_ped",
+      "name": "Dr. Priya Deshmukh",
+      "qualification": "MBBS, MD (Pediatrics)",
+      "experienceYears": 32,
+      "consultationFee": 800,
+      "avgRating": 4.3,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in pediatrician.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_36",
+      "clinicId": "clinic_06",
+      "specializationId": "spec_psych",
+      "name": "Dr. Swati Shah",
+      "qualification": "MBBS, DPM",
+      "experienceYears": 17,
+      "consultationFee": 1800,
+      "avgRating": 5.0,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali",
+        "Gujarati"
+      ],
+      "bio": "Specializes in psychiatrist with a focus on evidence-based, patient-first care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_37",
+      "clinicId": "clinic_07",
+      "specializationId": "spec_ortho",
+      "name": "Dr. Priya Sheikh",
+      "qualification": "MBBS, MS (Orthopedics)",
+      "experienceYears": 29,
+      "consultationFee": 1500,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_38",
+      "clinicId": "clinic_08",
+      "specializationId": "spec_dent",
+      "name": "Dr. Tanvi Deshmukh",
+      "qualification": "BDS, MDS (Periodontics)",
+      "experienceYears": 27,
+      "consultationFee": 800,
+      "avgRating": 4.6,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_39",
+      "clinicId": "clinic_09",
+      "specializationId": "spec_derm",
+      "name": "Dr. Anil Reddy",
+      "qualification": "MBBS, MD (Dermatology)",
+      "experienceYears": 25,
+      "consultationFee": 1000,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_40",
+      "clinicId": "clinic_10",
+      "specializationId": "spec_neuro",
+      "name": "Dr. Pooja Reddy",
+      "qualification": "MBBS, MD, DM (Neurology)",
+      "experienceYears": 29,
+      "consultationFee": 1800,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil",
+        "Kannada"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in neurologist.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_41",
+      "clinicId": "clinic_11",
+      "specializationId": "spec_dent",
+      "name": "Dr. Meera Chatterjee",
+      "qualification": "BDS",
+      "experienceYears": 6,
+      "consultationFee": 800,
+      "avgRating": 4.6,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_42",
+      "clinicId": "clinic_12",
+      "specializationId": "spec_cardio",
+      "name": "Dr. Anil Kulkarni",
+      "qualification": "MBBS, MD (Medicine), DNB (Cardiology)",
+      "experienceYears": 4,
+      "consultationFee": 400,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Combines clinical expertise in cardiologist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_43",
+      "clinicId": "clinic_13",
+      "specializationId": "spec_ortho",
+      "name": "Dr. Siddharth Khan",
+      "qualification": "MBBS, D.Ortho",
+      "experienceYears": 16,
+      "consultationFee": 700,
+      "avgRating": 4.3,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Has treated thousands of patients over a 16-year career in orthopedic.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_44",
+      "clinicId": "clinic_14",
+      "specializationId": "spec_cardio",
+      "name": "Dr. Pranav Pillai",
+      "qualification": "MBBS, MD (Medicine), DNB (Cardiology)",
+      "experienceYears": 5,
+      "consultationFee": 1500,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Gujarati",
+        "Tamil"
+      ],
+      "bio": "Combines clinical expertise in cardiologist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_45",
+      "clinicId": "clinic_15",
+      "specializationId": "spec_derm",
+      "name": "Dr. Sunita Pillai",
+      "qualification": "MBBS, DVD",
+      "experienceYears": 32,
+      "consultationFee": 600,
+      "avgRating": 4.8,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Urdu",
+        "Gujarati"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in dermatologist.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_46",
+      "clinicId": "clinic_01",
+      "specializationId": "spec_psych",
+      "name": "Dr. Alisha Rao",
+      "qualification": "MBBS, DPM",
+      "experienceYears": 12,
+      "consultationFee": 1200,
+      "avgRating": 4.3,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Urdu"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_47",
+      "clinicId": "clinic_02",
+      "specializationId": "spec_ped",
+      "name": "Dr. Rajesh Kulkarni",
+      "qualification": "MBBS, DCH",
+      "experienceYears": 11,
+      "consultationFee": 1000,
+      "avgRating": 4.8,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi"
+      ],
+      "bio": "Combines clinical expertise in pediatrician with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 15,
+      "avgConsultationMinutes": 15
+    },
+    {
+      "id": "doc_48",
+      "clinicId": "clinic_03",
+      "specializationId": "spec_neuro",
+      "name": "Dr. Sunita Pillai",
+      "qualification": "MBBS, DNB (Neurology)",
+      "experienceYears": 17,
+      "consultationFee": 400,
+      "avgRating": 4.4,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Bengali",
+        "Marathi"
+      ],
+      "bio": "Combines clinical expertise in neurologist with a strong emphasis on preventive care.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_49",
+      "clinicId": "clinic_04",
+      "specializationId": "spec_ent",
+      "name": "Dr. Nikhil Gupta",
+      "qualification": "MBBS, MS (ENT)",
+      "experienceYears": 28,
+      "consultationFee": 1000,
+      "avgRating": 4.9,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "bio": "Known for a calm, thorough approach and clear explanations of treatment options.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    },
+    {
+      "id": "doc_50",
+      "clinicId": "clinic_05",
+      "specializationId": "spec_ortho",
+      "name": "Dr. Ayesha Sharma",
+      "qualification": "MBBS, MS (Orthopedics)",
+      "experienceYears": 16,
+      "consultationFee": 900,
+      "avgRating": 4.7,
+      "reviewCount": 0,
+      "languages": [
+        "English",
+        "Hindi",
+        "Tamil"
+      ],
+      "bio": "Trained at leading Mumbai institutions, with special interest in orthopedic.",
+      "slotDurationMinutes": 20,
+      "avgConsultationMinutes": 20
+    }
+  ],
+  "availability": [
+    {
+      "id": "avail_001",
+      "doctorId": "doc_01",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_002",
+      "doctorId": "doc_01",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_003",
+      "doctorId": "doc_01",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_004",
+      "doctorId": "doc_01",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_005",
+      "doctorId": "doc_01",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_006",
+      "doctorId": "doc_01",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_007",
+      "doctorId": "doc_01",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_008",
+      "doctorId": "doc_01",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_009",
+      "doctorId": "doc_01",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_010",
+      "doctorId": "doc_01",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_011",
+      "doctorId": "doc_02",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_012",
+      "doctorId": "doc_02",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_013",
+      "doctorId": "doc_02",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_014",
+      "doctorId": "doc_02",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_015",
+      "doctorId": "doc_02",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_016",
+      "doctorId": "doc_02",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_017",
+      "doctorId": "doc_02",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_018",
+      "doctorId": "doc_02",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_019",
+      "doctorId": "doc_02",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_020",
+      "doctorId": "doc_02",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_021",
+      "doctorId": "doc_03",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_022",
+      "doctorId": "doc_03",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_023",
+      "doctorId": "doc_03",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_024",
+      "doctorId": "doc_03",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_025",
+      "doctorId": "doc_03",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_026",
+      "doctorId": "doc_03",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_027",
+      "doctorId": "doc_03",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_028",
+      "doctorId": "doc_03",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_029",
+      "doctorId": "doc_03",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_030",
+      "doctorId": "doc_03",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_031",
+      "doctorId": "doc_04",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_032",
+      "doctorId": "doc_04",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_033",
+      "doctorId": "doc_04",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_034",
+      "doctorId": "doc_04",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_035",
+      "doctorId": "doc_04",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_036",
+      "doctorId": "doc_04",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_037",
+      "doctorId": "doc_04",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_038",
+      "doctorId": "doc_04",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_039",
+      "doctorId": "doc_04",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_040",
+      "doctorId": "doc_04",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_041",
+      "doctorId": "doc_05",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_042",
+      "doctorId": "doc_05",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_043",
+      "doctorId": "doc_05",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_044",
+      "doctorId": "doc_05",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_045",
+      "doctorId": "doc_05",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_046",
+      "doctorId": "doc_05",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_047",
+      "doctorId": "doc_05",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_048",
+      "doctorId": "doc_05",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_049",
+      "doctorId": "doc_05",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_050",
+      "doctorId": "doc_05",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_051",
+      "doctorId": "doc_05",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_052",
+      "doctorId": "doc_06",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_053",
+      "doctorId": "doc_06",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_054",
+      "doctorId": "doc_06",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_055",
+      "doctorId": "doc_06",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_056",
+      "doctorId": "doc_06",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_057",
+      "doctorId": "doc_06",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_058",
+      "doctorId": "doc_06",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_059",
+      "doctorId": "doc_06",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_060",
+      "doctorId": "doc_06",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_061",
+      "doctorId": "doc_06",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_062",
+      "doctorId": "doc_07",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_063",
+      "doctorId": "doc_07",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_064",
+      "doctorId": "doc_07",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_065",
+      "doctorId": "doc_07",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_066",
+      "doctorId": "doc_07",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_067",
+      "doctorId": "doc_07",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_068",
+      "doctorId": "doc_07",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_069",
+      "doctorId": "doc_07",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_070",
+      "doctorId": "doc_07",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_071",
+      "doctorId": "doc_07",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_072",
+      "doctorId": "doc_08",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_073",
+      "doctorId": "doc_08",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_074",
+      "doctorId": "doc_08",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_075",
+      "doctorId": "doc_08",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_076",
+      "doctorId": "doc_08",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_077",
+      "doctorId": "doc_08",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_078",
+      "doctorId": "doc_08",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_079",
+      "doctorId": "doc_08",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_080",
+      "doctorId": "doc_08",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_081",
+      "doctorId": "doc_08",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_082",
+      "doctorId": "doc_08",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_083",
+      "doctorId": "doc_09",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_084",
+      "doctorId": "doc_09",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_085",
+      "doctorId": "doc_09",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_086",
+      "doctorId": "doc_09",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_087",
+      "doctorId": "doc_09",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_088",
+      "doctorId": "doc_09",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_089",
+      "doctorId": "doc_09",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_090",
+      "doctorId": "doc_09",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_091",
+      "doctorId": "doc_09",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_092",
+      "doctorId": "doc_09",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_093",
+      "doctorId": "doc_09",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_094",
+      "doctorId": "doc_10",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_095",
+      "doctorId": "doc_10",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_096",
+      "doctorId": "doc_10",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_097",
+      "doctorId": "doc_10",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_098",
+      "doctorId": "doc_10",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_099",
+      "doctorId": "doc_10",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_100",
+      "doctorId": "doc_10",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_101",
+      "doctorId": "doc_10",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_102",
+      "doctorId": "doc_10",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_103",
+      "doctorId": "doc_10",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_104",
+      "doctorId": "doc_11",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_105",
+      "doctorId": "doc_11",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_106",
+      "doctorId": "doc_11",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_107",
+      "doctorId": "doc_11",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_108",
+      "doctorId": "doc_11",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_109",
+      "doctorId": "doc_11",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_110",
+      "doctorId": "doc_11",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_111",
+      "doctorId": "doc_11",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_112",
+      "doctorId": "doc_11",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_113",
+      "doctorId": "doc_11",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_114",
+      "doctorId": "doc_12",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_115",
+      "doctorId": "doc_12",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_116",
+      "doctorId": "doc_12",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_117",
+      "doctorId": "doc_12",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_118",
+      "doctorId": "doc_12",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_119",
+      "doctorId": "doc_12",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_120",
+      "doctorId": "doc_12",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_121",
+      "doctorId": "doc_12",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_122",
+      "doctorId": "doc_12",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_123",
+      "doctorId": "doc_12",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_124",
+      "doctorId": "doc_13",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_125",
+      "doctorId": "doc_13",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_126",
+      "doctorId": "doc_13",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_127",
+      "doctorId": "doc_13",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_128",
+      "doctorId": "doc_13",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_129",
+      "doctorId": "doc_13",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_130",
+      "doctorId": "doc_13",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_131",
+      "doctorId": "doc_13",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_132",
+      "doctorId": "doc_13",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_133",
+      "doctorId": "doc_13",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_134",
+      "doctorId": "doc_14",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_135",
+      "doctorId": "doc_14",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_136",
+      "doctorId": "doc_14",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_137",
+      "doctorId": "doc_14",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_138",
+      "doctorId": "doc_14",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_139",
+      "doctorId": "doc_14",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_140",
+      "doctorId": "doc_14",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_141",
+      "doctorId": "doc_14",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_142",
+      "doctorId": "doc_14",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_143",
+      "doctorId": "doc_14",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_144",
+      "doctorId": "doc_14",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_145",
+      "doctorId": "doc_15",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_146",
+      "doctorId": "doc_15",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_147",
+      "doctorId": "doc_15",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_148",
+      "doctorId": "doc_15",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_149",
+      "doctorId": "doc_15",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_150",
+      "doctorId": "doc_15",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_151",
+      "doctorId": "doc_15",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_152",
+      "doctorId": "doc_15",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_153",
+      "doctorId": "doc_15",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_154",
+      "doctorId": "doc_15",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_155",
+      "doctorId": "doc_16",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_156",
+      "doctorId": "doc_16",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_157",
+      "doctorId": "doc_16",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_158",
+      "doctorId": "doc_16",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_159",
+      "doctorId": "doc_16",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_160",
+      "doctorId": "doc_16",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_161",
+      "doctorId": "doc_16",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_162",
+      "doctorId": "doc_16",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_163",
+      "doctorId": "doc_16",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_164",
+      "doctorId": "doc_16",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_165",
+      "doctorId": "doc_17",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_166",
+      "doctorId": "doc_17",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_167",
+      "doctorId": "doc_17",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_168",
+      "doctorId": "doc_17",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_169",
+      "doctorId": "doc_17",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_170",
+      "doctorId": "doc_17",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_171",
+      "doctorId": "doc_17",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_172",
+      "doctorId": "doc_17",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_173",
+      "doctorId": "doc_17",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_174",
+      "doctorId": "doc_17",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_175",
+      "doctorId": "doc_18",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_176",
+      "doctorId": "doc_18",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_177",
+      "doctorId": "doc_18",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_178",
+      "doctorId": "doc_18",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_179",
+      "doctorId": "doc_18",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_180",
+      "doctorId": "doc_18",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_181",
+      "doctorId": "doc_18",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_182",
+      "doctorId": "doc_18",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_183",
+      "doctorId": "doc_18",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_184",
+      "doctorId": "doc_18",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_185",
+      "doctorId": "doc_19",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_186",
+      "doctorId": "doc_19",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_187",
+      "doctorId": "doc_19",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_188",
+      "doctorId": "doc_19",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_189",
+      "doctorId": "doc_19",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_190",
+      "doctorId": "doc_19",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_191",
+      "doctorId": "doc_19",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_192",
+      "doctorId": "doc_19",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_193",
+      "doctorId": "doc_19",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_194",
+      "doctorId": "doc_19",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_195",
+      "doctorId": "doc_20",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_196",
+      "doctorId": "doc_20",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_197",
+      "doctorId": "doc_20",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_198",
+      "doctorId": "doc_20",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_199",
+      "doctorId": "doc_20",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_200",
+      "doctorId": "doc_20",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_201",
+      "doctorId": "doc_20",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_202",
+      "doctorId": "doc_20",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_203",
+      "doctorId": "doc_20",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_204",
+      "doctorId": "doc_20",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_205",
+      "doctorId": "doc_20",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_206",
+      "doctorId": "doc_21",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_207",
+      "doctorId": "doc_21",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_208",
+      "doctorId": "doc_21",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_209",
+      "doctorId": "doc_21",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_210",
+      "doctorId": "doc_21",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_211",
+      "doctorId": "doc_21",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_212",
+      "doctorId": "doc_21",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_213",
+      "doctorId": "doc_21",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_214",
+      "doctorId": "doc_21",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_215",
+      "doctorId": "doc_21",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_216",
+      "doctorId": "doc_22",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_217",
+      "doctorId": "doc_22",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_218",
+      "doctorId": "doc_22",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_219",
+      "doctorId": "doc_22",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_220",
+      "doctorId": "doc_22",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_221",
+      "doctorId": "doc_22",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_222",
+      "doctorId": "doc_22",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_223",
+      "doctorId": "doc_22",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_224",
+      "doctorId": "doc_22",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_225",
+      "doctorId": "doc_22",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_226",
+      "doctorId": "doc_22",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_227",
+      "doctorId": "doc_23",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_228",
+      "doctorId": "doc_23",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_229",
+      "doctorId": "doc_23",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_230",
+      "doctorId": "doc_23",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_231",
+      "doctorId": "doc_23",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_232",
+      "doctorId": "doc_23",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_233",
+      "doctorId": "doc_23",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_234",
+      "doctorId": "doc_23",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_235",
+      "doctorId": "doc_23",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_236",
+      "doctorId": "doc_23",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_237",
+      "doctorId": "doc_23",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_238",
+      "doctorId": "doc_24",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_239",
+      "doctorId": "doc_24",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_240",
+      "doctorId": "doc_24",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_241",
+      "doctorId": "doc_24",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_242",
+      "doctorId": "doc_24",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_243",
+      "doctorId": "doc_24",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_244",
+      "doctorId": "doc_24",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_245",
+      "doctorId": "doc_24",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_246",
+      "doctorId": "doc_24",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_247",
+      "doctorId": "doc_24",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_248",
+      "doctorId": "doc_25",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_249",
+      "doctorId": "doc_25",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_250",
+      "doctorId": "doc_25",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_251",
+      "doctorId": "doc_25",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_252",
+      "doctorId": "doc_25",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_253",
+      "doctorId": "doc_25",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_254",
+      "doctorId": "doc_25",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_255",
+      "doctorId": "doc_25",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_256",
+      "doctorId": "doc_25",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_257",
+      "doctorId": "doc_25",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_258",
+      "doctorId": "doc_25",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_259",
+      "doctorId": "doc_26",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_260",
+      "doctorId": "doc_26",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_261",
+      "doctorId": "doc_26",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_262",
+      "doctorId": "doc_26",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_263",
+      "doctorId": "doc_26",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_264",
+      "doctorId": "doc_26",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_265",
+      "doctorId": "doc_26",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_266",
+      "doctorId": "doc_26",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_267",
+      "doctorId": "doc_26",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_268",
+      "doctorId": "doc_26",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_269",
+      "doctorId": "doc_26",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_270",
+      "doctorId": "doc_27",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_271",
+      "doctorId": "doc_27",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_272",
+      "doctorId": "doc_27",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_273",
+      "doctorId": "doc_27",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_274",
+      "doctorId": "doc_27",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_275",
+      "doctorId": "doc_27",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_276",
+      "doctorId": "doc_27",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_277",
+      "doctorId": "doc_27",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_278",
+      "doctorId": "doc_27",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_279",
+      "doctorId": "doc_27",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_280",
+      "doctorId": "doc_27",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_281",
+      "doctorId": "doc_28",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_282",
+      "doctorId": "doc_28",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_283",
+      "doctorId": "doc_28",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_284",
+      "doctorId": "doc_28",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_285",
+      "doctorId": "doc_28",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_286",
+      "doctorId": "doc_28",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_287",
+      "doctorId": "doc_28",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_288",
+      "doctorId": "doc_28",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_289",
+      "doctorId": "doc_28",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_290",
+      "doctorId": "doc_28",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_291",
+      "doctorId": "doc_29",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_292",
+      "doctorId": "doc_29",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_293",
+      "doctorId": "doc_29",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_294",
+      "doctorId": "doc_29",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_295",
+      "doctorId": "doc_29",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_296",
+      "doctorId": "doc_29",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_297",
+      "doctorId": "doc_29",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_298",
+      "doctorId": "doc_29",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_299",
+      "doctorId": "doc_29",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_300",
+      "doctorId": "doc_29",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_301",
+      "doctorId": "doc_30",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_302",
+      "doctorId": "doc_30",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_303",
+      "doctorId": "doc_30",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_304",
+      "doctorId": "doc_30",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_305",
+      "doctorId": "doc_30",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_306",
+      "doctorId": "doc_30",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_307",
+      "doctorId": "doc_30",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_308",
+      "doctorId": "doc_30",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_309",
+      "doctorId": "doc_30",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_310",
+      "doctorId": "doc_30",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_311",
+      "doctorId": "doc_30",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_312",
+      "doctorId": "doc_31",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_313",
+      "doctorId": "doc_31",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_314",
+      "doctorId": "doc_31",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_315",
+      "doctorId": "doc_31",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_316",
+      "doctorId": "doc_31",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_317",
+      "doctorId": "doc_31",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_318",
+      "doctorId": "doc_31",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_319",
+      "doctorId": "doc_31",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_320",
+      "doctorId": "doc_31",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_321",
+      "doctorId": "doc_31",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_322",
+      "doctorId": "doc_32",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_323",
+      "doctorId": "doc_32",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_324",
+      "doctorId": "doc_32",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_325",
+      "doctorId": "doc_32",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_326",
+      "doctorId": "doc_32",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_327",
+      "doctorId": "doc_32",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_328",
+      "doctorId": "doc_32",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_329",
+      "doctorId": "doc_32",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_330",
+      "doctorId": "doc_32",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_331",
+      "doctorId": "doc_32",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_332",
+      "doctorId": "doc_32",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_333",
+      "doctorId": "doc_33",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_334",
+      "doctorId": "doc_33",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_335",
+      "doctorId": "doc_33",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_336",
+      "doctorId": "doc_33",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_337",
+      "doctorId": "doc_33",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_338",
+      "doctorId": "doc_33",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_339",
+      "doctorId": "doc_33",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_340",
+      "doctorId": "doc_33",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_341",
+      "doctorId": "doc_33",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_342",
+      "doctorId": "doc_33",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_343",
+      "doctorId": "doc_34",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_344",
+      "doctorId": "doc_34",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_345",
+      "doctorId": "doc_34",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_346",
+      "doctorId": "doc_34",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_347",
+      "doctorId": "doc_34",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_348",
+      "doctorId": "doc_34",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_349",
+      "doctorId": "doc_34",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_350",
+      "doctorId": "doc_34",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_351",
+      "doctorId": "doc_34",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_352",
+      "doctorId": "doc_34",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_353",
+      "doctorId": "doc_35",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_354",
+      "doctorId": "doc_35",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_355",
+      "doctorId": "doc_35",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_356",
+      "doctorId": "doc_35",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_357",
+      "doctorId": "doc_35",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_358",
+      "doctorId": "doc_35",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_359",
+      "doctorId": "doc_35",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_360",
+      "doctorId": "doc_35",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_361",
+      "doctorId": "doc_35",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_362",
+      "doctorId": "doc_35",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_363",
+      "doctorId": "doc_35",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_364",
+      "doctorId": "doc_36",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_365",
+      "doctorId": "doc_36",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_366",
+      "doctorId": "doc_36",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_367",
+      "doctorId": "doc_36",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_368",
+      "doctorId": "doc_36",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_369",
+      "doctorId": "doc_36",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_370",
+      "doctorId": "doc_36",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_371",
+      "doctorId": "doc_36",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_372",
+      "doctorId": "doc_36",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_373",
+      "doctorId": "doc_36",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_374",
+      "doctorId": "doc_37",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_375",
+      "doctorId": "doc_37",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_376",
+      "doctorId": "doc_37",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_377",
+      "doctorId": "doc_37",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_378",
+      "doctorId": "doc_37",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_379",
+      "doctorId": "doc_37",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_380",
+      "doctorId": "doc_37",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_381",
+      "doctorId": "doc_37",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_382",
+      "doctorId": "doc_37",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_383",
+      "doctorId": "doc_37",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_384",
+      "doctorId": "doc_38",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_385",
+      "doctorId": "doc_38",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_386",
+      "doctorId": "doc_38",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_387",
+      "doctorId": "doc_38",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_388",
+      "doctorId": "doc_38",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_389",
+      "doctorId": "doc_38",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_390",
+      "doctorId": "doc_38",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_391",
+      "doctorId": "doc_38",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_392",
+      "doctorId": "doc_38",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_393",
+      "doctorId": "doc_38",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_394",
+      "doctorId": "doc_39",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_395",
+      "doctorId": "doc_39",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_396",
+      "doctorId": "doc_39",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_397",
+      "doctorId": "doc_39",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_398",
+      "doctorId": "doc_39",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_399",
+      "doctorId": "doc_39",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_400",
+      "doctorId": "doc_39",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_401",
+      "doctorId": "doc_39",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_402",
+      "doctorId": "doc_39",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_403",
+      "doctorId": "doc_39",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_404",
+      "doctorId": "doc_40",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_405",
+      "doctorId": "doc_40",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_406",
+      "doctorId": "doc_40",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_407",
+      "doctorId": "doc_40",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_408",
+      "doctorId": "doc_40",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_409",
+      "doctorId": "doc_40",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_410",
+      "doctorId": "doc_40",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_411",
+      "doctorId": "doc_40",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_412",
+      "doctorId": "doc_40",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_413",
+      "doctorId": "doc_40",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_414",
+      "doctorId": "doc_41",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_415",
+      "doctorId": "doc_41",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_416",
+      "doctorId": "doc_41",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_417",
+      "doctorId": "doc_41",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_418",
+      "doctorId": "doc_41",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_419",
+      "doctorId": "doc_41",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_420",
+      "doctorId": "doc_41",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_421",
+      "doctorId": "doc_41",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_422",
+      "doctorId": "doc_41",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_423",
+      "doctorId": "doc_41",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_424",
+      "doctorId": "doc_41",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_425",
+      "doctorId": "doc_42",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_426",
+      "doctorId": "doc_42",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_427",
+      "doctorId": "doc_42",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_428",
+      "doctorId": "doc_42",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_429",
+      "doctorId": "doc_42",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_430",
+      "doctorId": "doc_42",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_431",
+      "doctorId": "doc_42",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_432",
+      "doctorId": "doc_42",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_433",
+      "doctorId": "doc_42",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_434",
+      "doctorId": "doc_42",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_435",
+      "doctorId": "doc_43",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_436",
+      "doctorId": "doc_43",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_437",
+      "doctorId": "doc_43",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_438",
+      "doctorId": "doc_43",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_439",
+      "doctorId": "doc_43",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_440",
+      "doctorId": "doc_43",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_441",
+      "doctorId": "doc_43",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_442",
+      "doctorId": "doc_43",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_443",
+      "doctorId": "doc_43",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_444",
+      "doctorId": "doc_43",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_445",
+      "doctorId": "doc_44",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_446",
+      "doctorId": "doc_44",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_447",
+      "doctorId": "doc_44",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_448",
+      "doctorId": "doc_44",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_449",
+      "doctorId": "doc_44",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_450",
+      "doctorId": "doc_44",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_451",
+      "doctorId": "doc_44",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_452",
+      "doctorId": "doc_44",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_453",
+      "doctorId": "doc_44",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_454",
+      "doctorId": "doc_44",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_455",
+      "doctorId": "doc_45",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_456",
+      "doctorId": "doc_45",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_457",
+      "doctorId": "doc_45",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_458",
+      "doctorId": "doc_45",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_459",
+      "doctorId": "doc_45",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_460",
+      "doctorId": "doc_45",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_461",
+      "doctorId": "doc_45",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_462",
+      "doctorId": "doc_45",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_463",
+      "doctorId": "doc_45",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_464",
+      "doctorId": "doc_45",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_465",
+      "doctorId": "doc_46",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_466",
+      "doctorId": "doc_46",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_467",
+      "doctorId": "doc_46",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_468",
+      "doctorId": "doc_46",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_469",
+      "doctorId": "doc_46",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_470",
+      "doctorId": "doc_46",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_471",
+      "doctorId": "doc_46",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_472",
+      "doctorId": "doc_46",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_473",
+      "doctorId": "doc_46",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_474",
+      "doctorId": "doc_46",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_475",
+      "doctorId": "doc_47",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_476",
+      "doctorId": "doc_47",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_477",
+      "doctorId": "doc_47",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_478",
+      "doctorId": "doc_47",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_479",
+      "doctorId": "doc_47",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_480",
+      "doctorId": "doc_47",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_481",
+      "doctorId": "doc_47",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_482",
+      "doctorId": "doc_47",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_483",
+      "doctorId": "doc_47",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_484",
+      "doctorId": "doc_47",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 15
+    },
+    {
+      "id": "avail_485",
+      "doctorId": "doc_48",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_486",
+      "doctorId": "doc_48",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_487",
+      "doctorId": "doc_48",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_488",
+      "doctorId": "doc_48",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_489",
+      "doctorId": "doc_48",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_490",
+      "doctorId": "doc_48",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_491",
+      "doctorId": "doc_48",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_492",
+      "doctorId": "doc_48",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_493",
+      "doctorId": "doc_48",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_494",
+      "doctorId": "doc_48",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_495",
+      "doctorId": "doc_49",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_496",
+      "doctorId": "doc_49",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_497",
+      "doctorId": "doc_49",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_498",
+      "doctorId": "doc_49",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_499",
+      "doctorId": "doc_49",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_500",
+      "doctorId": "doc_49",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_501",
+      "doctorId": "doc_49",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_502",
+      "doctorId": "doc_49",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_503",
+      "doctorId": "doc_49",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_504",
+      "doctorId": "doc_49",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_505",
+      "doctorId": "doc_49",
+      "dayOfWeek": 5,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_506",
+      "doctorId": "doc_50",
+      "dayOfWeek": 0,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_507",
+      "doctorId": "doc_50",
+      "dayOfWeek": 0,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_508",
+      "doctorId": "doc_50",
+      "dayOfWeek": 1,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_509",
+      "doctorId": "doc_50",
+      "dayOfWeek": 1,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_510",
+      "doctorId": "doc_50",
+      "dayOfWeek": 2,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_511",
+      "doctorId": "doc_50",
+      "dayOfWeek": 2,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_512",
+      "doctorId": "doc_50",
+      "dayOfWeek": 3,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_513",
+      "doctorId": "doc_50",
+      "dayOfWeek": 3,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_514",
+      "doctorId": "doc_50",
+      "dayOfWeek": 4,
+      "startTime": "10:00",
+      "endTime": "14:00",
+      "slotDurationMinutes": 20
+    },
+    {
+      "id": "avail_515",
+      "doctorId": "doc_50",
+      "dayOfWeek": 4,
+      "startTime": "17:00",
+      "endTime": "20:00",
+      "slotDurationMinutes": 20
+    }
+  ],
+  "faqs": [
+    {
+      "id": "faq_001",
+      "clinicId": "clinic_01",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_002",
+      "clinicId": "clinic_01",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_003",
+      "clinicId": "clinic_01",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_004",
+      "clinicId": "clinic_01",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_005",
+      "clinicId": "clinic_01",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_006",
+      "clinicId": "clinic_01",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_007",
+      "clinicId": "clinic_01",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_008",
+      "clinicId": "clinic_01",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_009",
+      "clinicId": "clinic_01",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_010",
+      "clinicId": "clinic_01",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_011",
+      "clinicId": "clinic_02",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_012",
+      "clinicId": "clinic_02",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_013",
+      "clinicId": "clinic_02",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_014",
+      "clinicId": "clinic_02",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_015",
+      "clinicId": "clinic_02",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_016",
+      "clinicId": "clinic_02",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_017",
+      "clinicId": "clinic_02",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_018",
+      "clinicId": "clinic_02",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_019",
+      "clinicId": "clinic_02",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_020",
+      "clinicId": "clinic_02",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_021",
+      "clinicId": "clinic_03",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_022",
+      "clinicId": "clinic_03",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_023",
+      "clinicId": "clinic_03",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_024",
+      "clinicId": "clinic_03",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_025",
+      "clinicId": "clinic_03",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_026",
+      "clinicId": "clinic_03",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_027",
+      "clinicId": "clinic_03",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_028",
+      "clinicId": "clinic_03",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_029",
+      "clinicId": "clinic_03",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_030",
+      "clinicId": "clinic_04",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_031",
+      "clinicId": "clinic_04",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_032",
+      "clinicId": "clinic_04",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_033",
+      "clinicId": "clinic_04",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_034",
+      "clinicId": "clinic_04",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_035",
+      "clinicId": "clinic_04",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_036",
+      "clinicId": "clinic_04",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_037",
+      "clinicId": "clinic_04",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_038",
+      "clinicId": "clinic_04",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_039",
+      "clinicId": "clinic_05",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_040",
+      "clinicId": "clinic_05",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_041",
+      "clinicId": "clinic_05",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_042",
+      "clinicId": "clinic_05",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_043",
+      "clinicId": "clinic_05",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_044",
+      "clinicId": "clinic_05",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_045",
+      "clinicId": "clinic_05",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_046",
+      "clinicId": "clinic_05",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_047",
+      "clinicId": "clinic_05",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_048",
+      "clinicId": "clinic_06",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_049",
+      "clinicId": "clinic_06",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_050",
+      "clinicId": "clinic_06",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_051",
+      "clinicId": "clinic_06",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_052",
+      "clinicId": "clinic_06",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_053",
+      "clinicId": "clinic_06",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_054",
+      "clinicId": "clinic_06",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_055",
+      "clinicId": "clinic_06",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_056",
+      "clinicId": "clinic_06",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_057",
+      "clinicId": "clinic_07",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_058",
+      "clinicId": "clinic_07",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_059",
+      "clinicId": "clinic_07",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_060",
+      "clinicId": "clinic_07",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_061",
+      "clinicId": "clinic_07",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_062",
+      "clinicId": "clinic_07",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_063",
+      "clinicId": "clinic_07",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_064",
+      "clinicId": "clinic_07",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_065",
+      "clinicId": "clinic_08",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_066",
+      "clinicId": "clinic_08",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_067",
+      "clinicId": "clinic_08",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_068",
+      "clinicId": "clinic_08",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_069",
+      "clinicId": "clinic_08",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_070",
+      "clinicId": "clinic_08",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_071",
+      "clinicId": "clinic_08",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_072",
+      "clinicId": "clinic_08",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_073",
+      "clinicId": "clinic_09",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_074",
+      "clinicId": "clinic_09",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_075",
+      "clinicId": "clinic_09",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_076",
+      "clinicId": "clinic_09",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_077",
+      "clinicId": "clinic_09",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_078",
+      "clinicId": "clinic_09",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_079",
+      "clinicId": "clinic_09",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_080",
+      "clinicId": "clinic_09",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_081",
+      "clinicId": "clinic_09",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_082",
+      "clinicId": "clinic_09",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_083",
+      "clinicId": "clinic_10",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_084",
+      "clinicId": "clinic_10",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_085",
+      "clinicId": "clinic_10",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_086",
+      "clinicId": "clinic_10",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_087",
+      "clinicId": "clinic_10",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_088",
+      "clinicId": "clinic_10",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_089",
+      "clinicId": "clinic_10",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_090",
+      "clinicId": "clinic_10",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_091",
+      "clinicId": "clinic_10",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_092",
+      "clinicId": "clinic_11",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_093",
+      "clinicId": "clinic_11",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_094",
+      "clinicId": "clinic_11",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_095",
+      "clinicId": "clinic_11",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_096",
+      "clinicId": "clinic_11",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_097",
+      "clinicId": "clinic_11",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_098",
+      "clinicId": "clinic_11",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_099",
+      "clinicId": "clinic_11",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_100",
+      "clinicId": "clinic_12",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_101",
+      "clinicId": "clinic_12",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_102",
+      "clinicId": "clinic_12",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_103",
+      "clinicId": "clinic_12",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_104",
+      "clinicId": "clinic_12",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_105",
+      "clinicId": "clinic_12",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_106",
+      "clinicId": "clinic_12",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_107",
+      "clinicId": "clinic_12",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_108",
+      "clinicId": "clinic_13",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_109",
+      "clinicId": "clinic_13",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_110",
+      "clinicId": "clinic_13",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_111",
+      "clinicId": "clinic_13",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_112",
+      "clinicId": "clinic_13",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_113",
+      "clinicId": "clinic_13",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_114",
+      "clinicId": "clinic_13",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_115",
+      "clinicId": "clinic_13",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_116",
+      "clinicId": "clinic_14",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_117",
+      "clinicId": "clinic_14",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_118",
+      "clinicId": "clinic_14",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_119",
+      "clinicId": "clinic_14",
+      "question": "Can I walk in without an appointment?",
+      "answer": "Yes, walk-in patients are welcome. Scan the QR code at reception to join the live queue for your preferred doctor."
+    },
+    {
+      "id": "faq_120",
+      "clinicId": "clinic_14",
+      "question": "Do you accept health insurance?",
+      "answer": "We accept cashless treatment from most major insurance providers. Please carry your insurance card and ID proof; our front desk can verify coverage on arrival."
+    },
+    {
+      "id": "faq_121",
+      "clinicId": "clinic_14",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_122",
+      "clinicId": "clinic_14",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_123",
+      "clinicId": "clinic_14",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    },
+    {
+      "id": "faq_124",
+      "clinicId": "clinic_14",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_125",
+      "clinicId": "clinic_14",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_126",
+      "clinicId": "clinic_15",
+      "question": "Can I reschedule or cancel my appointment online?",
+      "answer": "Yes, you can reschedule or cancel any upcoming appointment directly from the Patient Portal up to 2 hours before the scheduled time."
+    },
+    {
+      "id": "faq_127",
+      "clinicId": "clinic_15",
+      "question": "Do you offer video consultations?",
+      "answer": "Select doctors offer video consultations. This is indicated on the doctor's profile if available."
+    },
+    {
+      "id": "faq_128",
+      "clinicId": "clinic_15",
+      "question": "Is parking available at the clinic?",
+      "answer": "Yes, paid parking is available on the premises for patients and visitors."
+    },
+    {
+      "id": "faq_129",
+      "clinicId": "clinic_15",
+      "question": "How do I get my lab reports or test results?",
+      "answer": "Reports are typically available within 24-48 hours and can be collected at reception or accessed via the Patient Portal, depending on the test."
+    },
+    {
+      "id": "faq_130",
+      "clinicId": "clinic_15",
+      "question": "What are your emergency timings?",
+      "answer": "Our emergency department operates 24x7, including holidays."
+    },
+    {
+      "id": "faq_131",
+      "clinicId": "clinic_15",
+      "question": "What are your consultation fees?",
+      "answer": "Consultation fees vary by doctor and specialization, typically ranging from \u20b9400 to \u20b92000. Exact fees are shown on each doctor's profile before booking."
+    },
+    {
+      "id": "faq_132",
+      "clinicId": "clinic_15",
+      "question": "Is there a pharmacy on site?",
+      "answer": "Yes, an in-house pharmacy is available during clinic operating hours."
+    },
+    {
+      "id": "faq_133",
+      "clinicId": "clinic_15",
+      "question": "What documents should I bring for my first visit?",
+      "answer": "Please bring a valid photo ID, any previous medical records or prescriptions, and your insurance card if applicable."
+    }
+  ],
+  "patients": [
+    {
+      "id": "patient_01",
+      "clerkUserId": "user_demo_01",
+      "name": "Rahul Fernandes",
+      "email": "rahul.fernandes1@demo.clinicai.example",
+      "phone": "+91-9850780112"
+    },
+    {
+      "id": "patient_02",
+      "clerkUserId": "user_demo_02",
+      "name": "Simran Patil",
+      "email": "simran.patil2@demo.clinicai.example",
+      "phone": "+91-9843311626"
+    },
+    {
+      "id": "patient_03",
+      "clerkUserId": "user_demo_03",
+      "name": "Arjun Deshmukh",
+      "email": "arjun.deshmukh3@demo.clinicai.example",
+      "phone": "+91-9884903294"
+    },
+    {
+      "id": "patient_04",
+      "clerkUserId": "user_demo_04",
+      "name": "Pooja Reddy",
+      "email": "pooja.reddy4@demo.clinicai.example",
+      "phone": "+91-9891378577"
+    },
+    {
+      "id": "patient_05",
+      "clerkUserId": "user_demo_05",
+      "name": "Karan Bhatt",
+      "email": "karan.bhatt5@demo.clinicai.example",
+      "phone": "+91-9893002706"
+    },
+    {
+      "id": "patient_06",
+      "clerkUserId": "user_demo_06",
+      "name": "Ananya Rao",
+      "email": "ananya.rao6@demo.clinicai.example",
+      "phone": "+91-9880138498"
+    },
+    {
+      "id": "patient_07",
+      "clerkUserId": "user_demo_07",
+      "name": "Vivaan Verma",
+      "email": "vivaan.verma7@demo.clinicai.example",
+      "phone": "+91-9870467027"
+    },
+    {
+      "id": "patient_08",
+      "clerkUserId": "user_demo_08",
+      "name": "Ishita Pillai",
+      "email": "ishita.pillai8@demo.clinicai.example",
+      "phone": "+91-9849910061"
+    },
+    {
+      "id": "patient_09",
+      "clerkUserId": "user_demo_09",
+      "name": "Aryan Fernandes",
+      "email": "aryan.fernandes9@demo.clinicai.example",
+      "phone": "+91-9867556566"
+    },
+    {
+      "id": "patient_10",
+      "clerkUserId": "user_demo_10",
+      "name": "Diya Gupta",
+      "email": "diya.gupta10@demo.clinicai.example",
+      "phone": "+91-9886320155"
+    },
+    {
+      "id": "patient_11",
+      "clerkUserId": "user_demo_11",
+      "name": "Rohit Bhatt",
+      "email": "rohit.bhatt11@demo.clinicai.example",
+      "phone": "+91-9818083974"
+    },
+    {
+      "id": "patient_12",
+      "clerkUserId": "user_demo_12",
+      "name": "Naina Bhatt",
+      "email": "naina.bhatt12@demo.clinicai.example",
+      "phone": "+91-9823318904"
+    },
+    {
+      "id": "patient_13",
+      "clerkUserId": "user_demo_13",
+      "name": "Sameer Nair",
+      "email": "sameer.nair13@demo.clinicai.example",
+      "phone": "+91-9893955206"
+    },
+    {
+      "id": "patient_14",
+      "clerkUserId": "user_demo_14",
+      "name": "Kritika Nair",
+      "email": "kritika.nair14@demo.clinicai.example",
+      "phone": "+91-9845520201"
+    },
+    {
+      "id": "patient_15",
+      "clerkUserId": "user_demo_15",
+      "name": "Yash Chatterjee",
+      "email": "yash.chatterjee15@demo.clinicai.example",
+      "phone": "+91-9820896797"
+    },
+    {
+      "id": "patient_16",
+      "clerkUserId": "user_demo_16",
+      "name": "Meher Iyer",
+      "email": "meher.iyer16@demo.clinicai.example",
+      "phone": "+91-9842194159"
+    },
+    {
+      "id": "patient_17",
+      "clerkUserId": "user_demo_17",
+      "name": "Om Iyer",
+      "email": "om.iyer17@demo.clinicai.example",
+      "phone": "+91-9884087145"
+    },
+    {
+      "id": "patient_18",
+      "clerkUserId": "user_demo_18",
+      "name": "Tara Patil",
+      "email": "tara.patil18@demo.clinicai.example",
+      "phone": "+91-9831009452"
+    },
+    {
+      "id": "patient_19",
+      "clerkUserId": "user_demo_19",
+      "name": "Aakash Sharma",
+      "email": "aakash.sharma19@demo.clinicai.example",
+      "phone": "+91-9864830300"
+    },
+    {
+      "id": "patient_20",
+      "clerkUserId": "user_demo_20",
+      "name": "Riya Pillai",
+      "email": "riya.pillai20@demo.clinicai.example",
+      "phone": "+91-9889699989"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "appt_001",
+      "patientId": "patient_10",
+      "doctorId": "doc_31",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-08",
+      "startTime": "11:30"
+    },
+    {
+      "id": "appt_002",
+      "patientId": "patient_10",
+      "doctorId": "doc_46",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-15",
+      "startTime": "10:15"
+    },
+    {
+      "id": "appt_003",
+      "patientId": "patient_19",
+      "doctorId": "doc_17",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-11",
+      "startTime": "13:00"
+    },
+    {
+      "id": "appt_004",
+      "patientId": "patient_08",
+      "doctorId": "doc_35",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-10",
+      "startTime": "12:15"
+    },
+    {
+      "id": "appt_005",
+      "patientId": "patient_02",
+      "doctorId": "doc_05",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-10",
+      "startTime": "19:30"
+    },
+    {
+      "id": "appt_006",
+      "patientId": "patient_19",
+      "doctorId": "doc_39",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-12",
+      "startTime": "13:00"
+    },
+    {
+      "id": "appt_007",
+      "patientId": "patient_10",
+      "doctorId": "doc_30",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-14",
+      "startTime": "12:45"
+    },
+    {
+      "id": "appt_008",
+      "patientId": "patient_03",
+      "doctorId": "doc_29",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-17",
+      "startTime": "10:45"
+    },
+    {
+      "id": "appt_009",
+      "patientId": "patient_11",
+      "doctorId": "doc_48",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-17",
+      "startTime": "12:00"
+    },
+    {
+      "id": "appt_010",
+      "patientId": "patient_08",
+      "doctorId": "doc_06",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-17",
+      "startTime": "17:00"
+    },
+    {
+      "id": "appt_011",
+      "patientId": "patient_09",
+      "doctorId": "doc_49",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-17",
+      "startTime": "10:15"
+    },
+    {
+      "id": "appt_012",
+      "patientId": "patient_17",
+      "doctorId": "doc_31",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-15",
+      "startTime": "12:15"
+    },
+    {
+      "id": "appt_013",
+      "patientId": "patient_14",
+      "doctorId": "doc_38",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-15",
+      "startTime": "10:45"
+    },
+    {
+      "id": "appt_014",
+      "patientId": "patient_14",
+      "doctorId": "doc_23",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-13",
+      "startTime": "12:00"
+    },
+    {
+      "id": "appt_015",
+      "patientId": "patient_11",
+      "doctorId": "doc_11",
+      "type": "SCHEDULED",
+      "status": "confirmed",
+      "date": "2026-08-14",
+      "startTime": "18:45"
+    },
+    {
+      "id": "appt_016",
+      "patientId": "patient_02",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_017",
+      "patientId": "patient_15",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_018",
+      "patientId": "patient_03",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_019",
+      "patientId": "patient_11",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_020",
+      "patientId": "patient_09",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_021",
+      "patientId": "patient_11",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_022",
+      "patientId": "patient_04",
+      "doctorId": "doc_19",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_023",
+      "patientId": "patient_17",
+      "doctorId": "doc_43",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_024",
+      "patientId": "patient_01",
+      "doctorId": "doc_43",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_025",
+      "patientId": "patient_18",
+      "doctorId": "doc_43",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_026",
+      "patientId": "patient_15",
+      "doctorId": "doc_43",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_027",
+      "patientId": "patient_14",
+      "doctorId": "doc_43",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_028",
+      "patientId": "patient_02",
+      "doctorId": "doc_43",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_029",
+      "patientId": "patient_17",
+      "doctorId": "doc_26",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_030",
+      "patientId": "patient_12",
+      "doctorId": "doc_26",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_031",
+      "patientId": "patient_20",
+      "doctorId": "doc_26",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_032",
+      "patientId": "patient_16",
+      "doctorId": "doc_26",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_033",
+      "patientId": "patient_02",
+      "doctorId": "doc_49",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_034",
+      "patientId": "patient_07",
+      "doctorId": "doc_49",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_035",
+      "patientId": "patient_09",
+      "doctorId": "doc_49",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_036",
+      "patientId": "patient_18",
+      "doctorId": "doc_49",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_037",
+      "patientId": "patient_05",
+      "doctorId": "doc_49",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    },
+    {
+      "id": "appt_038",
+      "patientId": "patient_10",
+      "doctorId": "doc_49",
+      "type": "WALK_IN",
+      "status": "confirmed",
+      "date": "2026-08-07",
+      "startTime": null
+    }
+  ],
+  "queueEntries": [
+    {
+      "id": "queue_001",
+      "appointmentId": "appt_016",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 1,
+      "position": 1,
+      "status": "completed",
+      "joinedAt": "2026-08-07T10:45:00"
+    },
+    {
+      "id": "queue_002",
+      "appointmentId": "appt_017",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 2,
+      "position": 2,
+      "status": "completed",
+      "joinedAt": "2026-08-07T11:45:00"
+    },
+    {
+      "id": "queue_003",
+      "appointmentId": "appt_018",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 3,
+      "position": 3,
+      "status": "in_consultation",
+      "joinedAt": "2026-08-07T12:00:00"
+    },
+    {
+      "id": "queue_004",
+      "appointmentId": "appt_019",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 4,
+      "position": 4,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T13:00:00"
+    },
+    {
+      "id": "queue_005",
+      "appointmentId": "appt_020",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 5,
+      "position": 5,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T14:15:00"
+    },
+    {
+      "id": "queue_006",
+      "appointmentId": "appt_021",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 6,
+      "position": 6,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T15:15:00"
+    },
+    {
+      "id": "queue_007",
+      "appointmentId": "appt_022",
+      "doctorId": "doc_19",
+      "queueDate": "2026-08-07",
+      "queueNumber": 7,
+      "position": 7,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T16:30:00"
+    },
+    {
+      "id": "queue_008",
+      "appointmentId": "appt_023",
+      "doctorId": "doc_43",
+      "queueDate": "2026-08-07",
+      "queueNumber": 1,
+      "position": 1,
+      "status": "completed",
+      "joinedAt": "2026-08-07T10:00:00"
+    },
+    {
+      "id": "queue_009",
+      "appointmentId": "appt_024",
+      "doctorId": "doc_43",
+      "queueDate": "2026-08-07",
+      "queueNumber": 2,
+      "position": 2,
+      "status": "completed",
+      "joinedAt": "2026-08-07T11:45:00"
+    },
+    {
+      "id": "queue_010",
+      "appointmentId": "appt_025",
+      "doctorId": "doc_43",
+      "queueDate": "2026-08-07",
+      "queueNumber": 3,
+      "position": 3,
+      "status": "in_consultation",
+      "joinedAt": "2026-08-07T12:00:00"
+    },
+    {
+      "id": "queue_011",
+      "appointmentId": "appt_026",
+      "doctorId": "doc_43",
+      "queueDate": "2026-08-07",
+      "queueNumber": 4,
+      "position": 4,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T13:15:00"
+    },
+    {
+      "id": "queue_012",
+      "appointmentId": "appt_027",
+      "doctorId": "doc_43",
+      "queueDate": "2026-08-07",
+      "queueNumber": 5,
+      "position": 5,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T14:00:00"
+    },
+    {
+      "id": "queue_013",
+      "appointmentId": "appt_028",
+      "doctorId": "doc_43",
+      "queueDate": "2026-08-07",
+      "queueNumber": 6,
+      "position": 6,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T15:45:00"
+    },
+    {
+      "id": "queue_014",
+      "appointmentId": "appt_029",
+      "doctorId": "doc_26",
+      "queueDate": "2026-08-07",
+      "queueNumber": 1,
+      "position": 1,
+      "status": "completed",
+      "joinedAt": "2026-08-07T10:00:00"
+    },
+    {
+      "id": "queue_015",
+      "appointmentId": "appt_030",
+      "doctorId": "doc_26",
+      "queueDate": "2026-08-07",
+      "queueNumber": 2,
+      "position": 2,
+      "status": "completed",
+      "joinedAt": "2026-08-07T11:15:00"
+    },
+    {
+      "id": "queue_016",
+      "appointmentId": "appt_031",
+      "doctorId": "doc_26",
+      "queueDate": "2026-08-07",
+      "queueNumber": 3,
+      "position": 3,
+      "status": "in_consultation",
+      "joinedAt": "2026-08-07T12:45:00"
+    },
+    {
+      "id": "queue_017",
+      "appointmentId": "appt_032",
+      "doctorId": "doc_26",
+      "queueDate": "2026-08-07",
+      "queueNumber": 4,
+      "position": 4,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T13:30:00"
+    },
+    {
+      "id": "queue_018",
+      "appointmentId": "appt_033",
+      "doctorId": "doc_49",
+      "queueDate": "2026-08-07",
+      "queueNumber": 1,
+      "position": 1,
+      "status": "completed",
+      "joinedAt": "2026-08-07T10:30:00"
+    },
+    {
+      "id": "queue_019",
+      "appointmentId": "appt_034",
+      "doctorId": "doc_49",
+      "queueDate": "2026-08-07",
+      "queueNumber": 2,
+      "position": 2,
+      "status": "completed",
+      "joinedAt": "2026-08-07T11:45:00"
+    },
+    {
+      "id": "queue_020",
+      "appointmentId": "appt_035",
+      "doctorId": "doc_49",
+      "queueDate": "2026-08-07",
+      "queueNumber": 3,
+      "position": 3,
+      "status": "in_consultation",
+      "joinedAt": "2026-08-07T12:45:00"
+    },
+    {
+      "id": "queue_021",
+      "appointmentId": "appt_036",
+      "doctorId": "doc_49",
+      "queueDate": "2026-08-07",
+      "queueNumber": 4,
+      "position": 4,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T13:45:00"
+    },
+    {
+      "id": "queue_022",
+      "appointmentId": "appt_037",
+      "doctorId": "doc_49",
+      "queueDate": "2026-08-07",
+      "queueNumber": 5,
+      "position": 5,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T14:15:00"
+    },
+    {
+      "id": "queue_023",
+      "appointmentId": "appt_038",
+      "doctorId": "doc_49",
+      "queueDate": "2026-08-07",
+      "queueNumber": 6,
+      "position": 6,
+      "status": "waiting",
+      "joinedAt": "2026-08-07T15:45:00"
+    }
+  ]
+}
