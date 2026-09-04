@@ -38,10 +38,13 @@ async function main() {
 
   console.log("Seeding doctors...");
   for (const d of seedData.doctors) {
+    // seed-data.json has `rating`; schema v3.0 renamed this to avgRating + reviewCount
+    // (see SCHEMA_CHANGES.md §6). Strip `rating` out and remap it explicitly.
+    const { rating, ...rest } = d;
     await prisma.doctor.upsert({
       where: { id: d.id },
       update: {},
-      create: d,
+      create: { ...rest, avgRating: rating, reviewCount: 0 },
     });
   }
 
@@ -88,6 +91,11 @@ async function main() {
       update: {},
       create: {
         ...q,
+        // seed-data.json has no queueNumber (schema field didn't exist when it was
+        // generated). Demo data has clean sequential `position` values per doctor
+        // (1, 2, 3...) generated in check-in order, so reusing position as the
+        // immutable ticket number is safe here.
+        queueNumber: q.position,
         queueDate: new Date(q.queueDate),
         joinedAt: new Date(q.joinedAt),
         calledAt: q.calledAt ? new Date(q.calledAt) : null,

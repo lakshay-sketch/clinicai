@@ -1,7 +1,5 @@
 // This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Get a free hosted Postgres database in seconds: `npx create-db`
+// learn more in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
   provider = "prisma-client-js"
@@ -25,29 +23,26 @@ model Specialization {
 // CLINIC
 // -----------------------------------------------------------------
 model Clinic {
-  id        String @id @default(cuid())
-  name      String
-  address   String
-  area      String
-  city      String
-  pincode   String
-  latitude  Float
-  longitude Float
-  phone     String
-  email     String
-  qrToken   String @unique @default(cuid())
-
-  logoUrl       String?
-  coverImageUrl String?
-  photoUrls     String[]
-
+  id             String   @id @default(cuid())
+  name           String
+  address        String
+  area           String
+  city           String
+  pincode        String
+  latitude       Float
+  longitude      Float
+  phone          String
+  email          String
+  qrToken        String   @unique @default(cuid())
+  logoUrl        String?
+  coverImageUrl  String?
+  photoUrls      String[]
   parentClinicId String?
   parentClinic   Clinic?  @relation("ClinicBranches", fields: [parentClinicId], references: [id])
   branches       Clinic[] @relation("ClinicBranches")
-
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  isActive       Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 
   doctors       Doctor[]
   faqs          FAQ[]
@@ -58,6 +53,9 @@ model Clinic {
   @@index([city, area])
 }
 
+// -----------------------------------------------------------------
+// DOCTOR
+// -----------------------------------------------------------------
 enum DoctorStatus {
   AVAILABLE
   WITH_PATIENT
@@ -65,7 +63,7 @@ enum DoctorStatus {
 }
 
 model Doctor {
-  id                     String   @id @default(cuid())
+  id                     String       @id @default(cuid())
   clinicId               String
   specializationId       String
   name                   String
@@ -76,19 +74,15 @@ model Doctor {
   bio                    String
   slotDurationMinutes    Int
   avgConsultationMinutes Int
-
-  profileImageUrl String?
-  coverImageUrl   String?
-
-  avgRating   Float @default(0)
-  reviewCount Int   @default(0)
-
-  isAvailable   Boolean      @default(true)
-  currentStatus DoctorStatus @default(OFFLINE)
-
-  isActive  Boolean  @default(true)
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  profileImageUrl        String?
+  coverImageUrl          String?
+  avgRating              Float        @default(0)
+  reviewCount            Int          @default(0)
+  isAvailable            Boolean      @default(true)
+  currentStatus          DoctorStatus @default(OFFLINE)
+  isActive               Boolean      @default(true)
+  createdAt              DateTime     @default(now())
+  updatedAt              DateTime     @updatedAt
 
   clinic         Clinic         @relation(fields: [clinicId], references: [id], onDelete: Restrict)
   specialization Specialization @relation(fields: [specializationId], references: [id], onDelete: Restrict)
@@ -102,6 +96,9 @@ model Doctor {
   @@index([avgRating])
 }
 
+// -----------------------------------------------------------------
+// AVAILABILITY
+// -----------------------------------------------------------------
 model Availability {
   id                  String @id @default(cuid())
   doctorId            String
@@ -115,6 +112,9 @@ model Availability {
   @@index([doctorId, dayOfWeek])
 }
 
+// -----------------------------------------------------------------
+// DOCTOR LEAVE
+// -----------------------------------------------------------------
 enum LeaveType {
   FULL_DAY
   PARTIAL_DAY
@@ -136,6 +136,9 @@ model DoctorLeave {
   @@index([doctorId, dateFrom, dateTo])
 }
 
+// -----------------------------------------------------------------
+// FAQ
+// -----------------------------------------------------------------
 model FAQ {
   id       String @id @default(cuid())
   clinicId String
@@ -147,6 +150,9 @@ model FAQ {
   @@index([clinicId])
 }
 
+// -----------------------------------------------------------------
+// STAFF USER
+// -----------------------------------------------------------------
 enum StaffRole {
   ADMIN
   RECEPTION
@@ -155,7 +161,7 @@ enum StaffRole {
 model StaffUser {
   id          String    @id @default(cuid())
   clinicId    String
-  clerkUserId String    @unique
+  clerkUserId String?   @unique
   name        String
   email       String    @unique
   role        StaffRole @default(RECEPTION)
@@ -170,6 +176,9 @@ model StaffUser {
   @@index([clinicId])
 }
 
+// -----------------------------------------------------------------
+// PATIENT
+// -----------------------------------------------------------------
 model Patient {
   id          String   @id @default(cuid())
   clerkUserId String   @unique
@@ -183,6 +192,9 @@ model Patient {
   reviews       Review[]
 }
 
+// -----------------------------------------------------------------
+// APPOINTMENT
+// -----------------------------------------------------------------
 enum AppointmentType {
   SCHEDULED
   WALK_IN
@@ -215,6 +227,9 @@ model Appointment {
   @@index([patientId])
 }
 
+// -----------------------------------------------------------------
+// QUEUE
+// -----------------------------------------------------------------
 enum QueueStatus {
   waiting
   called
@@ -224,16 +239,13 @@ enum QueueStatus {
 }
 
 model QueueEntry {
-  id            String   @id @default(cuid())
-  appointmentId String   @unique
-  doctorId      String
-  queueDate     DateTime @db.Date
-
-  queueNumber Int
-  position    Int
-
-  estimatedWaitMinutes Int?
-
+  id                    String      @id @default(cuid())
+  appointmentId         String      @unique
+  doctorId              String
+  queueDate             DateTime    @db.Date
+  queueNumber           Int
+  position              Int
+  estimatedWaitMinutes  Int?
   status                QueueStatus @default(waiting)
   joinedAt              DateTime
   calledAt              DateTime?
@@ -249,6 +261,9 @@ model QueueEntry {
   @@index([doctorId, queueDate, status])
 }
 
+// -----------------------------------------------------------------
+// QUEUE AUDIT LOG
+// -----------------------------------------------------------------
 enum QueueAction {
   CALLED
   SKIPPED
@@ -273,6 +288,9 @@ model QueueAuditLog {
   @@index([queueEntryId])
 }
 
+// -----------------------------------------------------------------
+// CONVERSATION
+// -----------------------------------------------------------------
 enum ConversationChannel {
   WEB
   WHATSAPP
@@ -288,16 +306,14 @@ enum ConversationStatus {
 }
 
 model Conversation {
-  id        String              @id @default(cuid())
-  patientId String
-  clinicId  String
-  channel   ConversationChannel @default(WEB)
-  status    ConversationStatus  @default(ACTIVE)
-
+  id              String              @id @default(cuid())
+  patientId       String
+  clinicId        String
+  channel         ConversationChannel @default(WEB)
+  status          ConversationStatus  @default(ACTIVE)
   assignedStaffId String?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
 
   patient       Patient    @relation(fields: [patientId], references: [id], onDelete: Restrict)
   clinic        Clinic     @relation(fields: [clinicId], references: [id], onDelete: Restrict)
@@ -308,6 +324,9 @@ model Conversation {
   @@index([clinicId, status])
 }
 
+// -----------------------------------------------------------------
+// MESSAGE
+// -----------------------------------------------------------------
 enum MessageSender {
   PATIENT
   AI
@@ -332,6 +351,9 @@ model Message {
   @@index([conversationId, createdAt])
 }
 
+// -----------------------------------------------------------------
+// REVIEW
+// -----------------------------------------------------------------
 model Review {
   id            String   @id @default(cuid())
   patientId     String
@@ -348,6 +370,9 @@ model Review {
   @@index([doctorId])
 }
 
+// -----------------------------------------------------------------
+// AI LOG
+// -----------------------------------------------------------------
 model AILog {
   id               String   @id @default(cuid())
   messageId        String?

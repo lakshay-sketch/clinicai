@@ -21,3 +21,15 @@ export class InternalError extends AppError {
     super("INTERNAL_ERROR", message, 500, details);
   }
 }
+
+export class ValidationError extends AppError {
+  constructor(message = "Invalid request parameters", details?: unknown) {
+    super("VALIDATION_ERROR", message, 400, details);
+  }
+}
+
+export class ForbiddenError extends AppError {
+  constructor(message = "You do not have permission to perform this action", details?: unknown) {
+    super("FORBIDDEN", message, 403, details);
+  }
+}
