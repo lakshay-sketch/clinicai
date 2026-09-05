@@ -1,35 +1,64 @@
-import { Show, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import SiteHeader from "@/components/SiteHeader";
+import { prisma } from "@/server/lib/prisma";
 
-export default function Home() {
+async function getClinics() {
+  return prisma.clinic.findMany({
+    where: { isActive: true },
+    select: { id: true, name: true, area: true, city: true, qrToken: true },
+    orderBy: { name: "asc" },
+    take: 6,
+  });
+}
+
+export default async function HomePage() {
+  const clinics = await getClinics();
+
   return (
-    <div className="min-h-screen p-8">
-      <h1 className="text-2xl font-bold">ClinicAI — Setup Verification</h1>
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
 
-      <Show when="signed-out">
-        <p className="text-zinc-600 dark:text-zinc-400">
-          You are not signed in.
-        </p>
+      <main className="flex-1 max-w-4xl mx-auto px-6 py-16 w-full">
+        <p className="text-sm text-ink-60">AI-powered clinic receptionist</p>
+        <h1 className="font-serif text-4xl text-ink mt-2 max-w-xl">
+          Book appointments and skip the wait, across Mumbai's leading clinics.
+        </h1>
 
-        <div className="flex gap-4">
-          <Link href="/sign-in" className="underline">
-            Sign In
+        <div className="mt-8 flex gap-4">
+          <Link
+            href="/find"
+            className="bg-ink text-paper text-sm px-5 py-3 hover:bg-ink/90"
+          >
+            Find a doctor
           </Link>
-
-          <Link href="/sign-up" className="underline">
-            Sign Up
+          <Link
+            href="/sign-in"
+            className="border border-line text-ink text-sm px-5 py-3 hover:border-ink"
+          >
+            Clinic staff sign in
           </Link>
         </div>
-      </Show>
 
-      <Show when="signed-in">
-        <p className="text-zinc-600 dark:text-zinc-400">
-          You are signed in.
-        </p>
-
-        <UserButton />
-      </Show>
+        <div className="mt-16 border-t border-line pt-10">
+          <h2 className="font-serif text-lg text-ink mb-6">Partner clinics</h2>
+          <div className="grid grid-cols-2 gap-px bg-line border border-line">
+            {clinics.map((clinic) => (
+              <div key={clinic.id} className="bg-paper p-5">
+                <p className="text-ink text-sm font-medium">{clinic.name}</p>
+                <p className="text-xs text-ink-60 mt-0.5">{clinic.area}, {clinic.city}</p>
+                <div className="mt-3 flex gap-4">
+                  <Link href={`/chat/${clinic.id}`} className="text-xs text-teal underline">
+                    Ask a question
+                  </Link>
+                  <Link href={`/checkin/${clinic.qrToken}`} className="text-xs text-teal underline">
+                    Walk-in check-in
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
-  

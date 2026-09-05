@@ -1,5 +1,6 @@
 import { prisma } from "@/server/lib/prisma";
 import CheckinWidget from "./CheckinWidget";
+import SiteHeader from "@/components/SiteHeader";
 
 export default async function CheckinPage({ params }: { params: Promise<{ token: string }> }) {
   const { token } = await params;
@@ -16,21 +17,27 @@ export default async function CheckinPage({ params }: { params: Promise<{ token:
 
   if (!clinic) {
     return (
-      <div className="max-w-md mx-auto px-6 py-10">
-        <p className="text-sm text-red">This QR code isn't recognized. Please ask reception for help.</p>
+      <div className="min-h-screen flex flex-col">
+        <SiteHeader />
+        <div className="max-w-md mx-auto px-6 py-10">
+          <p className="text-sm text-red">This QR code isn't recognized. Please ask reception for help.</p>
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="max-w-md mx-auto px-6 py-10">
-      <p className="text-sm text-ink-60">Walk-in check-in</p>
-      <h1 className="font-serif text-2xl text-ink mt-1">{clinic.name}</h1>
-      <p className="text-sm text-ink-60 mt-1">{clinic.area}, {clinic.city}</p>
+    <div className="min-h-screen flex flex-col">
+      <SiteHeader />
+      <div className="max-w-md mx-auto px-6 py-10 w-full">
+        <p className="text-sm text-ink-60">Walk-in check-in</p>
+        <h1 className="font-serif text-2xl text-ink mt-1">{clinic.name}</h1>
+        <p className="text-sm text-ink-60 mt-1">{clinic.area}, {clinic.city}</p>
 
-      <div className="mt-8 border-t border-line pt-8">
-        <h2 className="text-sm font-medium text-ink mb-4">Choose a doctor to join the queue</h2>
-        <CheckinWidget doctors={clinic.doctors} />
+        <div className="mt-8 border-t border-line pt-8">
+          <h2 className="text-sm font-medium text-ink mb-4">Choose a doctor to join the queue</h2>
+          <CheckinWidget doctors={clinic.doctors} />
+        </div>
       </div>
     </div>
   );
