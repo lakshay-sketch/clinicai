@@ -1,26 +1,5 @@
 import Link from "next/link";
-
-type Doctor = {
-  id: string;
-  name: string;
-  qualification: string;
-  experienceYears: number;
-  consultationFee: number;
-  avgRating: number;
-  reviewCount: number;
-  specialization: { name: string };
-  clinic: { name: string; area: string; city: string };
-};
-
-async function getDoctors(specializationId?: string) {
-  const url = new URL("http://localhost:3000/api/doctors/search");
-  url.searchParams.set("pageSize", "20");
-  if (specializationId) url.searchParams.set("specializationId", specializationId);
-
-  const res = await fetch(url.toString(), { cache: "no-store" });
-  const json = await res.json();
-  return json.success ? (json.data as Doctor[]) : [];
-}
+import { prisma } from "@/server/lib/prisma";
 
 export default async function FindDoctorsPage({
   searchParams,
@@ -28,7 +7,16 @@ export default async function FindDoctorsPage({
   searchParams: Promise<{ specializationId?: string }>;
 }) {
   const { specializationId } = await searchParams;
-  const doctors = await getDoctors(specializationId);
+
+  const doctors = await prisma.doctor.findMany({
+    where: {
+      isActive: true,
+      ...(specializationId && { specializationId }),
+    },
+    include: { specialization: true, clinic: true },
+    orderBy: { avgRating: "desc" },
+    take: 20,
+  });
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-10">
