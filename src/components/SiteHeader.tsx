@@ -47,6 +47,9 @@ export default function SiteHeader() {
             </Link>
           </Show>
           <Show when="signed-in">
+            <Link href="/my-appointments" className="text-sm text-ink-60 hover:text-ink">
+              My Appointments
+            </Link>
             <StaffDashboardLink />
             <UserButton />
           </Show>
