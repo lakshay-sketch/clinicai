@@ -2,6 +2,8 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import { prisma } from "@/server/lib/prisma";
 
+const DEFAULT_CLINIC_ID = "clinic_01"; // Lilavati — used for the homepage's main chat CTA
+
 async function getClinics() {
   return prisma.clinic.findMany({
     where: { isActive: true },
@@ -24,7 +26,13 @@ export default async function HomePage() {
           Book appointments and skip the wait, across Mumbai's leading clinics.
         </h1>
 
-        <div className="mt-8 flex gap-4">
+        <div className="mt-8 flex flex-wrap gap-4">
+          <Link
+            href={`/chat/${DEFAULT_CLINIC_ID}`}
+            className="bg-teal text-paper text-sm px-5 py-3 hover:bg-teal/90"
+          >
+            Ask ClinicAI
+          </Link>
           <Link
             href="/find"
             className="bg-ink text-paper text-sm px-5 py-3 hover:bg-ink/90"

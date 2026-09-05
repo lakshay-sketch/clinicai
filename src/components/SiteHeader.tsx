@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Show, UserButton } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 
+const DEFAULT_CLINIC_ID = "clinic_01";
+
 function StaffDashboardLink() {
   const [isStaff, setIsStaff] = useState(false);
 
@@ -35,6 +37,9 @@ export default function SiteHeader() {
         <nav className="flex items-center gap-6">
           <Link href="/find" className="text-sm text-ink-60 hover:text-ink">
             Find a Doctor
+          </Link>
+          <Link href={`/chat/${DEFAULT_CLINIC_ID}`} className="text-sm text-teal hover:underline">
+            Ask ClinicAI
           </Link>
           <Show when="signed-out">
             <Link href="/sign-in" className="text-sm text-ink-60 hover:text-ink">
