@@ -1,11 +1,3 @@
-// Uses Groq's free-tier API (OpenAI-compatible) purely to UNDERSTAND the
-// patient's message — it never invents doctors, FAQs, or data. It only
-// returns a classification, which the orchestrator then maps to real,
-// validated specializations from our own database list. If Groq is
-// unavailable (no key, network error, rate limit), classify() returns null
-// and the caller falls back to the rule-based system — the app must never
-// break just because the LLM call failed.
-
 const VALID_SPECIALIZATIONS = [
   "General Physician", "Cardiologist", "Dermatologist", "Dentist",
   "Ophthalmologist", "ENT Specialist", "Orthopedic", "Pediatrician",
@@ -24,7 +16,7 @@ const SYSTEM_PROMPT = `You are an intent classifier for a clinic receptionist ch
 - "faq": asks about clinic hours, fees, parking, insurance, documents, cancellation policy, etc.
 - "booking": explicitly wants to book/schedule an appointment or join a queue
 - "greeting": just saying hi/hello
-- "smalltalk": thanks, goodbye, small talk
+- "smalltalk": thanks, goodbye, small talk, casual conversation not related to health or the clinic
 - "unclear": anything that doesn't fit the above
 
 If intent is "symptom", also pick the single most relevant specialization from EXACTLY this list (or null if none fit well):
@@ -36,7 +28,10 @@ Respond with ONLY valid JSON, no other text, in this exact shape:
 export const llmClassifierService = {
   classify: async (message: string): Promise<LlmIntent | null> => {
     const apiKey = process.env.GROQ_API_KEY;
-    if (!apiKey) return null;
+    if (!apiKey) {
+      console.log("[LLM] No GROQ_API_KEY set");
+      return null;
+    }
 
     try {
       const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -55,29 +50,40 @@ export const llmClassifierService = {
           max_tokens: 150,
           response_format: { type: "json_object" },
         }),
-        signal: AbortSignal.timeout(6000), // don't let a slow LLM call hang the chat
+        signal: AbortSignal.timeout(6000),
       });
 
-      if (!res.ok) return null;
+      if (!res.ok) {
+        const errText = await res.text();
+        console.log("[LLM] Groq returned non-OK status:", res.status, errText);
+        return null;
+      }
 
       const data = await res.json();
+      console.log("[LLM] Raw Groq response:", JSON.stringify(data));
+
       const content = data.choices?.[0]?.message?.content;
-      if (!content) return null;
+      if (!content) {
+        console.log("[LLM] No content in Groq response");
+        return null;
+      }
 
       const parsed = JSON.parse(content);
+      console.log("[LLM] Parsed classification:", JSON.stringify(parsed));
 
-      // Validate the LLM's output against our real, known values — never
-      // trust it blindly, since it's just classifying, not authoring data.
       if (!["emergency", "symptom", "faq", "booking", "greeting", "smalltalk", "unclear"].includes(parsed.intent)) {
+        console.log("[LLM] Invalid intent value:", parsed.intent);
         return null;
       }
       if (parsed.specialization && !VALID_SPECIALIZATIONS.includes(parsed.specialization)) {
+        console.log("[LLM] Specialization not in valid list, nulling:", parsed.specialization);
         parsed.specialization = null;
       }
 
       return parsed as LlmIntent;
-    } catch {
-      return null; // any failure (timeout, network, bad JSON) -> fall back silently
+    } catch (err) {
+      console.log("[LLM] Exception:", err);
+      return null;
     }
   },
 };
