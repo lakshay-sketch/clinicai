@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import { useRouter } from "next/navigation";
 
 type Doctor = { id: string; name: string; specialization: { name: string } };
 type QueueStatus = {
@@ -9,6 +10,7 @@ type QueueStatus = {
 };
 
 export default function CheckinWidget({ doctors }: { doctors: Doctor[] }) {
+  const router = useRouter();
   const [joining, setJoining] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [ticket, setTicket] = useState<{ queueNumber: number; doctorId: string } | null>(null);
@@ -31,11 +33,21 @@ export default function CheckinWidget({ doctors }: { doctors: Doctor[] }) {
   async function join(doctorId: string) {
     setJoining(true);
     setError(null);
+
     const res = await fetch("/api/queue/join", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ doctorId }),
     });
+
+    // Not signed in — send to sign-in, then come straight back to this exact
+    // check-in page afterwards, so the patient doesn't lose their place.
+    if (res.status === 401) {
+      const currentUrl = window.location.pathname;
+      router.push(`/sign-in?redirect_url=${encodeURIComponent(currentUrl)}`);
+      return;
+    }
+
     const json = await res.json();
     setJoining(false);
 

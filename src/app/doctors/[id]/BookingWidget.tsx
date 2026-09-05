@@ -1,12 +1,14 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 function todayISO() {
   return new Date().toISOString().split("T")[0];
 }
 
 export default function BookingWidget({ doctorId }: { doctorId: string }) {
+  const router = useRouter();
   const [date, setDate] = useState(todayISO());
   const [slots, setSlots] = useState<string[] | null>(null);
   const [loadingSlots, setLoadingSlots] = useState(false);
@@ -31,6 +33,15 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ doctorId, date, startTime }),
     });
+
+    // Not signed in — send to sign-in, then return to this exact doctor's
+    // page so the patient can pick up the booking where they left off.
+    if (res.status === 401) {
+      const currentUrl = window.location.pathname;
+      router.push(`/sign-in?redirect_url=${encodeURIComponent(currentUrl)}`);
+      return;
+    }
+
     const json = await res.json();
     setBooking(false);
 
