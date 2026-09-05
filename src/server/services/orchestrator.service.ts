@@ -27,9 +27,7 @@ type ChatResult =
   | { type: "fallback"; reply: string };
 
 async function specializationIdByName(name: string): Promise<{ id: string; name: string } | null> {
-  console.log("[Orchestrator] Looking up specialization by name:", JSON.stringify(name));
   const spec = await prisma.specialization.findFirst({ where: { name } });
-  console.log("[Orchestrator] DB lookup result:", JSON.stringify(spec));
   return spec ? { id: spec.id, name: spec.name } : null;
 }
 
@@ -114,7 +112,6 @@ export const orchestratorService = {
         case "smalltalk":
           return { type: "smalltalk", reply: "Happy to help! Let me know if there's anything else." };
         case "symptom": {
-          console.log("[Orchestrator] LLM symptom case, specialization field:", JSON.stringify(llmResult.specialization));
           if (llmResult.specialization) {
             const spec = await specializationIdByName(llmResult.specialization);
             if (spec) {

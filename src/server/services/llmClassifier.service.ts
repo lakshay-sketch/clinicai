@@ -19,6 +19,8 @@ const SYSTEM_PROMPT = `You are an intent classifier for a clinic receptionist ch
 - "smalltalk": thanks, goodbye, small talk, casual conversation not related to health or the clinic
 - "unclear": anything that doesn't fit the above
 
+Never suggest specific medications, dosages, or home remedies, even if asked directly — always route to "symptom" so the patient is directed to see a doctor.
+
 If intent is "symptom", also pick the single most relevant specialization from EXACTLY this list (or null if none fit well):
 ${VALID_SPECIALIZATIONS.join(", ")}
 
@@ -28,10 +30,7 @@ Respond with ONLY valid JSON, no other text, in this exact shape:
 export const llmClassifierService = {
   classify: async (message: string): Promise<LlmIntent | null> => {
     const apiKey = process.env.GROQ_API_KEY;
-    if (!apiKey) {
-      console.log("[LLM] No GROQ_API_KEY set");
-      return null;
-    }
+    if (!apiKey) return null;
 
     try {
       const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
@@ -54,36 +53,23 @@ export const llmClassifierService = {
         signal: AbortSignal.timeout(6000),
       });
 
-      if (!res.ok) {
-        const errText = await res.text();
-        console.log("[LLM] Groq returned non-OK status:", res.status, errText);
-        return null;
-      }
+      if (!res.ok) return null;
 
       const data = await res.json();
-      console.log("[LLM] Raw Groq response:", JSON.stringify(data));
-
       const content = data.choices?.[0]?.message?.content;
-      if (!content) {
-        console.log("[LLM] No content in Groq response");
-        return null;
-      }
+      if (!content) return null;
 
       const parsed = JSON.parse(content);
-      console.log("[LLM] Parsed classification:", JSON.stringify(parsed));
 
       if (!["emergency", "symptom", "faq", "booking", "greeting", "smalltalk", "unclear"].includes(parsed.intent)) {
-        console.log("[LLM] Invalid intent value:", parsed.intent);
         return null;
       }
       if (parsed.specialization && !VALID_SPECIALIZATIONS.includes(parsed.specialization)) {
-        console.log("[LLM] Specialization not in valid list, nulling:", parsed.specialization);
         parsed.specialization = null;
       }
 
       return parsed as LlmIntent;
-    } catch (err) {
-      console.log("[LLM] Exception:", err);
+    } catch {
       return null;
     }
   },
