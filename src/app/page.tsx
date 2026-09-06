@@ -1,8 +1,10 @@
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import { prisma } from "@/server/lib/prisma";
+import ChatWidget from "@/app/chat/[clinicId]/ChatWidget";
+import { LinkButton } from "@/components/ui/Button";
 
-const DEFAULT_CLINIC_ID = "clinic_01"; // Lilavati — used for the homepage's main chat CTA
+const DEFAULT_CLINIC_ID = "clinic_01";
 
 async function getClinics() {
   return prisma.clinic.findMany({
@@ -20,48 +22,44 @@ export default async function HomePage() {
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
 
-      <main className="flex-1 max-w-4xl mx-auto px-6 py-16 w-full">
-        <p className="text-sm text-ink-60">AI-powered clinic receptionist</p>
-        <h1 className="font-serif text-4xl text-ink mt-2 max-w-xl">
-          Book appointments and skip the wait, across Mumbai's leading clinics.
-        </h1>
-
-        <div className="mt-8 flex flex-wrap gap-4">
-          <Link
-            href={`/chat/${DEFAULT_CLINIC_ID}`}
-            className="bg-teal text-paper text-sm px-5 py-3 hover:bg-teal/90"
-          >
-            Ask ClinicAI
-          </Link>
-          <Link
-            href="/find"
-            className="bg-ink text-paper text-sm px-5 py-3 hover:bg-ink/90"
-          >
-            Find a doctor
-          </Link>
-          <Link
-            href="/sign-in"
-            className="border border-line text-ink text-sm px-5 py-3 hover:border-ink"
-          >
-            Clinic staff sign in
-          </Link>
+      <main className="flex-1 max-w-4xl mx-auto px-6 py-20 w-full animate-in">
+        <div className="max-w-lg">
+          <p className="text-sm text-teal font-medium tracking-wide">AI-powered clinic receptionist</p>
+          <h1 className="font-serif text-4xl text-ink mt-3 leading-tight">
+            Book appointments and skip the wait.
+          </h1>
+          <p className="text-base text-ink-70 mt-4 leading-relaxed">
+            Describe your symptoms below and ClinicAI will point you to the right
+            doctor across Mumbai's leading clinics — or browse and book directly.
+          </p>
         </div>
 
-        <div className="mt-16 border-t border-line pt-10">
-          <h2 className="font-serif text-lg text-ink mb-6">Partner clinics</h2>
+        <div className="mt-10 max-w-lg">
+          <ChatWidget clinicId={DEFAULT_CLINIC_ID} />
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          <LinkButton href="/find" variant="secondary">
+            Browse all doctors
+          </LinkButton>
+          <LinkButton href="/sign-in" variant="ghost">
+            Clinic staff sign in →
+          </LinkButton>
+        </div>
+
+        <div className="mt-24 border-t border-line pt-12">
+          <h2 className="font-serif text-xl text-ink mb-8">Partner clinics</h2>
           <div className="grid grid-cols-2 gap-px bg-line border border-line">
             {clinics.map((clinic) => (
-              <div key={clinic.id} className="bg-paper p-5">
+              <div key={clinic.id} className="bg-paper p-6 hover:bg-line/10 transition-colors">
                 <p className="text-ink text-sm font-medium">{clinic.name}</p>
-                <p className="text-xs text-ink-60 mt-0.5">{clinic.area}, {clinic.city}</p>
-                <div className="mt-3 flex gap-4">
-                  <Link href={`/chat/${clinic.id}`} className="text-xs text-teal underline">
-                    Ask a question
-                  </Link>
-                  <Link href={`/checkin/${clinic.qrToken}`} className="text-xs text-teal underline">
-                    Walk-in check-in
-                  </Link>
-                </div>
+                <p className="text-xs text-ink-50 mt-1">{clinic.area}, {clinic.city}</p>
+                <Link
+                  href={`/checkin/${clinic.qrToken}`}
+                  className="text-xs text-teal hover:underline underline-offset-2 mt-4 inline-block"
+                >
+                  Walk-in check-in →
+                </Link>
               </div>
             ))}
           </div>

@@ -2,29 +2,65 @@
 
 :root {
   --color-ink: #12233d;
-  --color-ink-60: #12233d99;
+  --color-ink-70: #12233db3;
+  --color-ink-50: #12233d80;
   --color-paper: #faf9f6;
   --color-teal: #1f6f6b;
+  --color-teal-soft: #1f6f6b1a;
   --color-amber: #a8720a;
   --color-red: #9e2b25;
-  --color-line: #dcd8ce;
+  --color-line: #e4e0d6;
+  --color-line-strong: #cfc9ba;
 }
 
 @theme inline {
   --color-ink: var(--color-ink);
-  --color-ink-60: var(--color-ink-60);
+  --color-ink-70: var(--color-ink-70);
+  --color-ink-50: var(--color-ink-50);
   --color-paper: var(--color-paper);
   --color-teal: var(--color-teal);
+  --color-teal-soft: var(--color-teal-soft);
   --color-amber: var(--color-amber);
   --color-red: var(--color-red);
   --color-line: var(--color-line);
+  --color-line-strong: var(--color-line-strong);
   --font-serif: var(--font-serif);
   --font-sans: var(--font-sans);
   --font-mono: var(--font-mono);
+}
+
+* {
+  border-color: var(--color-line);
 }
 
 body {
   background: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Consistent focus ring across every interactive element */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--color-teal-soft);
+  border-color: var(--color-teal);
+}
+
+/* Base transitions for anything interactive, kept subtle */
+a, button {
+  transition: color 150ms ease, background-color 150ms ease, border-color 150ms ease;
+}
+
+/* Subtle content entrance, not a full animation library */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  animation: fade-in-up 300ms ease-out;
 }
