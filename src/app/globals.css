@@ -4,6 +4,7 @@
   --color-ink: #12233d;
   --color-ink-70: #12233db3;
   --color-ink-50: #12233d80;
+  --color-ink-60: #12233d99;
   --color-paper: #faf9f6;
   --color-teal: #1f6f6b;
   --color-teal-soft: #1f6f6b1a;
@@ -17,6 +18,7 @@
   --color-ink: var(--color-ink);
   --color-ink-70: var(--color-ink-70);
   --color-ink-50: var(--color-ink-50);
+  --color-ink-60: var(--color-ink-60);
   --color-paper: var(--color-paper);
   --color-teal: var(--color-teal);
   --color-teal-soft: var(--color-teal-soft);
