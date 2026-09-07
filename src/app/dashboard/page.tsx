@@ -42,60 +42,60 @@ export default async function DashboardOverview() {
   const data = await getOverviewData();
 
   if (!data || !data.clinic) {
-    return <p className="text-sm text-ink-60">Unable to load clinic data.</p>;
+    return <p className="text-sm text-ink-70">Unable to load clinic data.</p>;
   }
 
   return (
     <div>
       <h1 className="font-serif text-2xl text-ink">{data.clinic.name}</h1>
-      <p className="text-sm text-ink-60 mt-1">
+      <p className="text-sm text-ink-70 mt-1.5">
         {data.clinic.area}, {data.clinic.city}
       </p>
 
       <div className="mt-8 grid grid-cols-3 gap-px bg-line border border-line">
-        <div className="bg-paper px-6 py-5">
-          <p className="text-xs text-ink-60">Active doctors</p>
-          <p className="font-mono text-3xl text-ink mt-1">{data.doctorCount}</p>
+        <div className="bg-paper px-6 py-6">
+          <p className="text-xs text-ink-50 uppercase tracking-wide">Active doctors</p>
+          <p className="font-mono text-3xl text-ink mt-2">{data.doctorCount}</p>
         </div>
-        <div className="bg-paper px-6 py-5">
-          <p className="text-xs text-ink-60">Waiting in queue today</p>
-          <p className="font-mono text-3xl text-teal mt-1">{data.queueWaiting}</p>
+        <div className="bg-paper px-6 py-6">
+          <p className="text-xs text-ink-50 uppercase tracking-wide">Waiting in queue today</p>
+          <p className="font-mono text-3xl text-teal mt-2">{data.queueWaiting}</p>
         </div>
-        <div className="bg-paper px-6 py-5">
-          <p className="text-xs text-ink-60">Signed in as</p>
-          <p className="text-lg text-ink mt-1">{data.staffName}</p>
+        <div className="bg-paper px-6 py-6">
+          <p className="text-xs text-ink-50 uppercase tracking-wide">Signed in as</p>
+          <p className="text-lg text-ink mt-2">{data.staffName}</p>
         </div>
       </div>
 
-      <div className="mt-10">
-        <h2 className="font-serif text-lg text-ink mb-4">Upcoming appointments</h2>
+      <div className="mt-12">
+        <h2 className="font-serif text-lg text-ink mb-5">Upcoming appointments</h2>
         <table className="w-full text-sm border-t border-line">
           <thead>
-            <tr className="text-left text-ink-60">
-              <th className="py-2 pr-4 font-normal">Date</th>
-              <th className="py-2 pr-4 font-normal">Time</th>
-              <th className="py-2 pr-4 font-normal">Patient</th>
-              <th className="py-2 pr-4 font-normal">Doctor</th>
-              <th className="py-2 pr-4 font-normal">Notes</th>
+            <tr className="text-left text-ink-50">
+              <th className="py-2.5 pr-4 font-normal">Date</th>
+              <th className="py-2.5 pr-4 font-normal">Time</th>
+              <th className="py-2.5 pr-4 font-normal">Patient</th>
+              <th className="py-2.5 pr-4 font-normal">Doctor</th>
+              <th className="py-2.5 pr-4 font-normal">Notes</th>
             </tr>
           </thead>
           <tbody>
             {data.upcomingAppointments.map((a) => (
               <tr key={a.id} className="border-t border-line">
-                <td className="py-3 pr-4 font-mono text-ink">
+                <td className="py-3.5 pr-4 font-mono text-ink">
                   {a.date.toISOString().split("T")[0]}
                 </td>
-                <td className="py-3 pr-4 font-mono text-ink">{a.startTime}</td>
-                <td className="py-3 pr-4 text-ink">{a.patient.name}</td>
-                <td className="py-3 pr-4 text-ink-60">{a.doctor.name}</td>
-                <td className="py-3 pr-4 text-ink-60 max-w-xs truncate" title={a.notes ?? ""}>
+                <td className="py-3.5 pr-4 font-mono text-ink">{a.startTime}</td>
+                <td className="py-3.5 pr-4 text-ink">{a.patient.name}</td>
+                <td className="py-3.5 pr-4 text-ink-70">{a.doctor.name}</td>
+                <td className="py-3.5 pr-4 text-ink-50 max-w-xs truncate" title={a.notes ?? ""}>
                   {a.notes ?? "—"}
                 </td>
               </tr>
             ))}
             {data.upcomingAppointments.length === 0 && (
               <tr>
-                <td colSpan={5} className="py-6 text-center text-ink-60">
+                <td colSpan={5} className="py-8 text-center text-ink-70">
                   No upcoming appointments.
                 </td>
               </tr>

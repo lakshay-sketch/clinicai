@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 
 export default function AddDoctorForm() {
   const router = useRouter();
@@ -40,19 +42,15 @@ export default function AddDoctorForm() {
 
   return (
     <form onSubmit={handleSubmit} className="grid grid-cols-3 gap-3">
-      <input name="name" placeholder="Full name" required className="border border-line px-3 py-2 text-sm" />
-      <input name="qualification" placeholder="Qualification" required className="border border-line px-3 py-2 text-sm" />
-      <input name="specializationId" placeholder="Specialization id (e.g. spec_gp)" required className="border border-line px-3 py-2 text-sm" />
-      <input name="experienceYears" type="number" placeholder="Years of experience" required className="border border-line px-3 py-2 text-sm" />
-      <input name="consultationFee" type="number" placeholder="Consultation fee (₹)" required className="border border-line px-3 py-2 text-sm" />
-      <input name="slotDurationMinutes" type="number" placeholder="Slot length (min)" required className="border border-line px-3 py-2 text-sm" />
-      <button
-        type="submit"
-        disabled={loading}
-        className="col-span-3 bg-ink text-paper text-sm py-2 hover:bg-ink/90 disabled:opacity-50"
-      >
+      <Input name="name" placeholder="Full name" required />
+      <Input name="qualification" placeholder="Qualification" required />
+      <Input name="specializationId" placeholder="Specialization id (e.g. spec_gp)" required />
+      <Input name="experienceYears" type="number" placeholder="Years of experience" required />
+      <Input name="consultationFee" type="number" placeholder="Consultation fee (₹)" required />
+      <Input name="slotDurationMinutes" type="number" placeholder="Slot length (min)" required />
+      <Button type="submit" disabled={loading} className="col-span-3">
         {loading ? "Adding…" : "Add doctor"}
-      </button>
+      </Button>
       {error && <p className="col-span-3 text-sm text-red">{error}</p>}
     </form>
   );
