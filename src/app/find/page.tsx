@@ -1,6 +1,7 @@
 import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import { prisma } from "@/server/lib/prisma";
+import NearbySearch from "./NearbySearch";
 
 type Doctor = {
   id: string;
@@ -50,7 +51,12 @@ export default async function FindDoctorsPage({
           </Link>
         )}
 
-        <div className="mt-8 divide-y divide-line border-t border-line">
+        <div className="mt-6">
+          <NearbySearch specializationId={specializationId} />
+        </div>
+
+        <h2 className="text-sm font-medium text-ink-60 mt-2 mb-2">All doctors</h2>
+        <div className="divide-y divide-line border-t border-line">
           {doctors.length === 0 && (
             <p className="py-6 text-sm text-ink-60">No doctors found for this filter.</p>
           )}
