@@ -216,6 +216,7 @@ model Appointment {
   status    AppointmentStatus
   date      DateTime          @db.Date
   startTime String?
+  notes     String?
   createdAt DateTime          @default(now())
 
   patient    Patient     @relation(fields: [patientId], references: [id], onDelete: Restrict)

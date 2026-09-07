@@ -63,7 +63,7 @@ import { ValidationError, NotFoundError } from "@/server/lib/errors";
 import type { Actor } from "@/server/middleware/withAuth";
 
 export const appointmentService = {
-  book: async (actor: Actor, params: { doctorId: string; date: string; startTime: string }) => {
+  book: async (actor: Actor, params: { doctorId: string; date: string; startTime: string; notes?: string }) => {
     if (actor.type !== "PATIENT") {
       throw new NotFoundError("Not permitted");
     }
@@ -84,6 +84,7 @@ export const appointmentService = {
       doctorId: params.doctorId,
       date,
       startTime: params.startTime,
+      notes: params.notes,
     });
 
     if (!appointment) {

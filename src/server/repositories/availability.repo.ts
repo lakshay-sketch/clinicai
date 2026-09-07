@@ -37,6 +37,7 @@ export const appointmentRepo = {
     doctorId: string;
     date: Date;
     startTime: string;
+    notes?: string;
   }) => {
     return prisma.$transaction(async (tx) => {
       const clash = await tx.appointment.findFirst({
@@ -58,6 +59,7 @@ export const appointmentRepo = {
           doctorId: params.doctorId,
           type: "SCHEDULED",
           status: "confirmed",
+          notes: params.notes,
           date: params.date,
           startTime: params.startTime,
         },

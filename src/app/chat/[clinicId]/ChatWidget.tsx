@@ -9,6 +9,8 @@ type Message = {
   specializationId?: string;
 };
 
+const SYMPTOM_NOTES_KEY = "clinicai_symptom_notes";
+
 export default function ChatWidget({ clinicId }: { clinicId: string }) {
   const [messages, setMessages] = useState<Message[]>([
     { role: "assistant", text: "Hi, how can I help? You can describe symptoms or ask about the clinic." },
@@ -32,6 +34,15 @@ export default function ChatWidget({ clinicId }: { clinicId: string }) {
     setLoading(false);
 
     if (json.success) {
+      // If this turned into a symptom match, remember what the patient said
+      // so it can be attached as context when they actually book — this is
+      // what lets a doctor see "why" a patient is coming, not just a slot.
+      if (json.data.type === "symptom_match") {
+        try {
+          localStorage.setItem(SYMPTOM_NOTES_KEY, userMessage);
+        } catch {}
+      }
+
       setMessages((m) => [
         ...m,
         { role: "assistant", text: json.data.reply, specializationId: json.data.specializationId },

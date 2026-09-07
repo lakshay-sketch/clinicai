@@ -76,6 +76,7 @@ export default async function DashboardOverview() {
               <th className="py-2 pr-4 font-normal">Time</th>
               <th className="py-2 pr-4 font-normal">Patient</th>
               <th className="py-2 pr-4 font-normal">Doctor</th>
+              <th className="py-2 pr-4 font-normal">Notes</th>
             </tr>
           </thead>
           <tbody>
@@ -87,11 +88,14 @@ export default async function DashboardOverview() {
                 <td className="py-3 pr-4 font-mono text-ink">{a.startTime}</td>
                 <td className="py-3 pr-4 text-ink">{a.patient.name}</td>
                 <td className="py-3 pr-4 text-ink-60">{a.doctor.name}</td>
+                <td className="py-3 pr-4 text-ink-60 max-w-xs truncate" title={a.notes ?? ""}>
+                  {a.notes ?? "—"}
+                </td>
               </tr>
             ))}
             {data.upcomingAppointments.length === 0 && (
               <tr>
-                <td colSpan={4} className="py-6 text-center text-ink-60">
+                <td colSpan={5} className="py-6 text-center text-ink-60">
                   No upcoming appointments.
                 </td>
               </tr>

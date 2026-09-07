@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 
+const SYMPTOM_NOTES_KEY = "clinicai_symptom_notes";
+
 function todayISO() {
   return new Date().toISOString().split("T")[0];
 }
@@ -28,14 +30,18 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
   async function book(startTime: string) {
     setBooking(true);
     setResult(null);
+
+    let notes: string | undefined;
+    try {
+      notes = localStorage.getItem(SYMPTOM_NOTES_KEY) ?? undefined;
+    } catch {}
+
     const res = await fetch("/api/appointments", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ doctorId, date, startTime }),
+      body: JSON.stringify({ doctorId, date, startTime, notes }),
     });
 
-    // Not signed in — send to sign-in, then return to this exact doctor's
-    // page so the patient can pick up the booking where they left off.
     if (res.status === 401) {
       const currentUrl = window.location.pathname;
       router.push(`/sign-in?redirect_url=${encodeURIComponent(currentUrl)}`);
@@ -48,6 +54,9 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
     if (json.success) {
       setResult({ success: true, message: `Booked for ${date} at ${startTime}.` });
       setSlots(null);
+      try {
+        localStorage.removeItem(SYMPTOM_NOTES_KEY);
+      } catch {}
     } else {
       setResult({ success: false, message: json.error?.message ?? "Booking failed" });
       loadSlots();
