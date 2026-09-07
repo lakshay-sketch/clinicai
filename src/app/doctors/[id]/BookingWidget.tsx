@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 
 const SYMPTOM_NOTES_KEY = "clinicai_symptom_notes";
 
@@ -67,28 +69,23 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
     <div>
       <div className="flex gap-3 items-end">
         <div>
-          <label className="block text-xs text-ink-60 mb-1">Date</label>
-          <input
+          <label className="block text-xs text-ink-50 mb-1.5">Date</label>
+          <Input
             type="date"
             value={date}
             min={todayISO()}
             onChange={(e) => { setDate(e.target.value); setSlots(null); setResult(null); }}
-            className="border border-line px-3 py-2 text-sm"
           />
         </div>
-        <button
-          onClick={loadSlots}
-          disabled={loadingSlots}
-          className="bg-ink text-paper text-sm px-4 py-2 hover:bg-ink/90 disabled:opacity-50"
-        >
+        <Button variant="secondary" onClick={loadSlots} disabled={loadingSlots}>
           {loadingSlots ? "Checking…" : "Check availability"}
-        </button>
+        </Button>
       </div>
 
       {slots && (
-        <div className="mt-5">
+        <div className="mt-6">
           {slots.length === 0 ? (
-            <p className="text-sm text-ink-60">No slots available on this date.</p>
+            <p className="text-sm text-ink-70">No slots available on this date.</p>
           ) : (
             <div className="flex flex-wrap gap-2">
               {slots.map((s) => (
@@ -96,7 +93,7 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
                   key={s}
                   onClick={() => book(s)}
                   disabled={booking}
-                  className="border border-line px-3 py-1.5 text-sm font-mono hover:border-ink hover:text-ink disabled:opacity-50"
+                  className="h-10 px-3 border border-line-strong text-sm font-mono text-ink hover:border-teal hover:text-teal disabled:opacity-50"
                 >
                   {s}
                 </button>
@@ -107,7 +104,7 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
       )}
 
       {result && (
-        <p className={`mt-4 text-sm ${result.success ? "text-teal" : "text-red"}`}>{result.message}</p>
+        <p className={`mt-5 text-sm ${result.success ? "text-teal" : "text-red"}`}>{result.message}</p>
       )}
     </div>
   );

@@ -7,9 +7,9 @@ export default async function ChatPage({ params }: { params: Promise<{ clinicId:
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <div className="max-w-lg mx-auto px-6 py-10 w-full">
-        <h1 className="font-serif text-2xl text-ink">Ask ClinicAI</h1>
-        <p className="text-sm text-ink-60 mt-1">
+      <div className="max-w-lg mx-auto px-6 py-14 w-full animate-in">
+        <h1 className="font-serif text-3xl text-ink">Ask ClinicAI</h1>
+        <p className="text-sm text-ink-70 mt-2">
           Describe your symptoms, or ask about clinic hours, fees, and booking.
         </p>
         <div className="mt-8">

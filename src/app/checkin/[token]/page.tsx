@@ -19,7 +19,7 @@ export default async function CheckinPage({ params }: { params: Promise<{ token:
     return (
       <div className="min-h-screen flex flex-col">
         <SiteHeader />
-        <div className="max-w-md mx-auto px-6 py-10">
+        <div className="max-w-md mx-auto px-6 py-14">
           <p className="text-sm text-red">This QR code isn't recognized. Please ask reception for help.</p>
         </div>
       </div>
@@ -29,13 +29,15 @@ export default async function CheckinPage({ params }: { params: Promise<{ token:
   return (
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
-      <div className="max-w-md mx-auto px-6 py-10 w-full">
-        <p className="text-sm text-ink-60">Walk-in check-in</p>
-        <h1 className="font-serif text-2xl text-ink mt-1">{clinic.name}</h1>
-        <p className="text-sm text-ink-60 mt-1">{clinic.area}, {clinic.city}</p>
+      <div className="max-w-md mx-auto px-6 py-14 w-full animate-in">
+        <p className="text-sm text-teal font-medium">Walk-in check-in</p>
+        <h1 className="font-serif text-3xl text-ink mt-2">{clinic.name}</h1>
+        <p className="text-sm text-ink-70 mt-2">{clinic.area}, {clinic.city}</p>
 
-        <div className="mt-8 border-t border-line pt-8">
-          <h2 className="text-sm font-medium text-ink mb-4">Choose a doctor to join the queue</h2>
+        <div className="mt-10 border-t border-line pt-8">
+          <h2 className="text-xs font-medium text-ink-50 uppercase tracking-wide mb-4">
+            Choose a doctor to join the queue
+          </h2>
           <CheckinWidget doctors={clinic.doctors} />
         </div>
       </div>

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 
 type Message = {
   role: "user" | "assistant";
@@ -34,9 +36,6 @@ export default function ChatWidget({ clinicId }: { clinicId: string }) {
     setLoading(false);
 
     if (json.success) {
-      // If this turned into a symptom match, remember what the patient said
-      // so it can be attached as context when they actually book — this is
-      // what lets a doctor see "why" a patient is coming, not just a slot.
       if (json.data.type === "symptom_match") {
         try {
           localStorage.setItem(SYMPTOM_NOTES_KEY, userMessage);
@@ -54,12 +53,12 @@ export default function ChatWidget({ clinicId }: { clinicId: string }) {
 
   return (
     <div className="border border-line">
-      <div className="p-4 space-y-3 max-h-96 overflow-y-auto">
+      <div className="p-5 space-y-3 max-h-96 overflow-y-auto">
         {messages.map((m, i) => (
           <div key={i} className={m.role === "user" ? "text-right" : ""}>
             <p
-              className={`inline-block px-3 py-2 text-sm max-w-[85%] ${
-                m.role === "user" ? "bg-ink text-paper" : "bg-line/30 text-ink"
+              className={`inline-block px-3.5 py-2.5 text-sm max-w-[85%] leading-relaxed ${
+                m.role === "user" ? "bg-ink text-paper" : "bg-line/40 text-ink"
               }`}
             >
               {m.text}
@@ -68,7 +67,7 @@ export default function ChatWidget({ clinicId }: { clinicId: string }) {
               <div className="mt-2">
                 <Link
                   href={`/find?specializationId=${m.specializationId}`}
-                  className="text-sm text-teal underline"
+                  className="text-sm text-teal hover:underline underline-offset-2"
                 >
                   See available doctors →
                 </Link>
@@ -76,23 +75,19 @@ export default function ChatWidget({ clinicId }: { clinicId: string }) {
             )}
           </div>
         ))}
-        {loading && <p className="text-sm text-ink-60">Thinking…</p>}
+        {loading && <p className="text-sm text-ink-50">Thinking…</p>}
       </div>
       <div className="border-t border-line p-3 flex gap-2">
-        <input
+        <Input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && send()}
           placeholder="Type your message…"
-          className="flex-1 border border-line px-3 py-2 text-sm"
+          className="flex-1"
         />
-        <button
-          onClick={send}
-          disabled={loading}
-          className="bg-ink text-paper text-sm px-4 py-2 hover:bg-ink/90 disabled:opacity-50"
-        >
+        <Button onClick={send} disabled={loading}>
           Send
-        </button>
+        </Button>
       </div>
     </div>
   );

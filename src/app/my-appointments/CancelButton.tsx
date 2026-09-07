@@ -19,7 +19,7 @@ export default function CancelButton({ appointmentId }: { appointmentId: string 
     <button
       onClick={cancel}
       disabled={loading}
-      className="text-sm text-red hover:underline disabled:opacity-50"
+      className="text-sm text-red hover:underline underline-offset-2 disabled:opacity-50"
     >
       {loading ? "Cancelling…" : "Cancel"}
     </button>
