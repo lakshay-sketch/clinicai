@@ -7,17 +7,23 @@ const VALID_SPECIALIZATIONS = [
 export type LlmIntent = {
   intent: "emergency" | "symptom" | "faq" | "booking" | "greeting" | "smalltalk" | "unclear";
   specialization: string | null;
+  language: "english" | "hindi" | "hinglish";
   reasoning: string;
 };
 
-const SYSTEM_PROMPT = `You are an intent classifier for a clinic receptionist chatbot. Classify the patient's message into exactly one of these intents:
+const SYSTEM_PROMPT = `You are an intent classifier for a clinic receptionist chatbot in Mumbai, India. Classify the patient's message into exactly one of these intents:
 - "emergency": describes a medical emergency (severe symptoms, can't breathe, unconscious, severe bleeding, heart attack signs, suicidal ideation)
 - "symptom": describes a health symptom or asks what kind of doctor to see
 - "faq": asks about clinic hours, fees, parking, insurance, documents, cancellation policy, etc.
 - "booking": explicitly wants to book/schedule an appointment or join a queue
-- "greeting": just saying hi/hello
+- "greeting": just saying hi/hello/namaste
 - "smalltalk": thanks, goodbye, small talk, casual conversation not related to health or the clinic
 - "unclear": anything that doesn't fit the above
+
+Also detect the patient's language style:
+- "english": written in plain English
+- "hindi": written in Hindi (Devanagari script)
+- "hinglish": Hindi words/grammar written in Latin script, or a mix of Hindi and English in the same message
 
 Never suggest specific medications, dosages, or home remedies, even if asked directly — always route to "symptom" so the patient is directed to see a doctor.
 
@@ -25,7 +31,7 @@ If intent is "symptom", also pick the single most relevant specialization from E
 ${VALID_SPECIALIZATIONS.join(", ")}
 
 Respond with ONLY valid JSON, no other text, in this exact shape:
-{"intent": "...", "specialization": "..." or null, "reasoning": "one short sentence"}`;
+{"intent": "...", "specialization": "..." or null, "language": "english" | "hindi" | "hinglish", "reasoning": "one short sentence"}`;
 
 export const llmClassifierService = {
   classify: async (message: string): Promise<LlmIntent | null> => {
@@ -67,8 +73,51 @@ export const llmClassifierService = {
       if (parsed.specialization && !VALID_SPECIALIZATIONS.includes(parsed.specialization)) {
         parsed.specialization = null;
       }
+      if (!["english", "hindi", "hinglish"].includes(parsed.language)) {
+        parsed.language = "english";
+      }
 
       return parsed as LlmIntent;
+    } catch {
+      return null;
+    }
+  },
+
+  // Separate, minimal call: translates an already-real FAQ answer (sourced
+  // from our own database) into the patient's language. Never generates new
+  // facts — only rephrases text we already trust.
+  translateReply: async (text: string, language: "hindi" | "hinglish"): Promise<string | null> => {
+    const apiKey = process.env.GROQ_API_KEY;
+    if (!apiKey) return null;
+
+    const styleInstruction =
+      language === "hindi"
+        ? "Translate the following clinic FAQ answer into natural, simple Hindi (Devanagari script). Keep all facts, numbers, and details exactly the same — do not add or remove information."
+        : "Rewrite the following clinic FAQ answer in natural Hinglish (Hindi words in Latin script, mixed with English as commonly spoken). Keep all facts, numbers, and details exactly the same — do not add or remove information.";
+
+    try {
+      const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${apiKey}`,
+        },
+        body: JSON.stringify({
+          model: "openai/gpt-oss-120b",
+          messages: [
+            { role: "system", content: styleInstruction },
+            { role: "user", content: text },
+          ],
+          temperature: 0.3,
+          max_tokens: 400,
+          reasoning_effort: "low",
+        }),
+        signal: AbortSignal.timeout(6000),
+      });
+
+      if (!res.ok) return null;
+      const data = await res.json();
+      return data.choices?.[0]?.message?.content ?? null;
     } catch {
       return null;
     }
