@@ -5,6 +5,7 @@ const navItems = [
   { href: "/dashboard", label: "Overview" },
   { href: "/dashboard/doctors", label: "Doctors" },
   { href: "/dashboard/queue", label: "Live Queue" },
+  { href: "/dashboard/analytics", label: "Analytics" },
   { href: "/dashboard/staff", label: "Staff" },
   { href: "/dashboard/settings", label: "Clinic Settings" },
 ];
