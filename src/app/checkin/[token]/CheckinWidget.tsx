@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/Button";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 type Doctor = { id: string; name: string; specialization: { name: string } };
 type QueueStatus = {
@@ -92,9 +93,12 @@ export default function CheckinWidget({ doctors }: { doctors: Doctor[] }) {
       <div className="divide-y divide-line border-t border-line">
         {doctors.map((doc) => (
           <div key={doc.id} className="py-5 flex items-center justify-between">
-            <div>
-              <p className="text-ink text-sm font-medium">{doc.name}</p>
-              <p className="text-xs text-ink-50 mt-0.5">{doc.specialization.name}</p>
+            <div className="flex items-center gap-3">
+              <DoctorAvatar name={doc.name} size={36} />
+              <div>
+                <p className="text-ink text-sm font-medium">{doc.name}</p>
+                <p className="text-xs text-ink-50 mt-0.5">{doc.specialization.name}</p>
+              </div>
             </div>
             <Button onClick={() => join(doc.id)} disabled={joining}>
               {joining ? "Joining…" : "Join queue"}

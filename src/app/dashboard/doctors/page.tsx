@@ -1,6 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { prisma } from "@/server/lib/prisma";
 import AddDoctorForm from "./AddDoctorForm";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 async function getDoctors() {
   const { userId } = await auth();
@@ -48,7 +49,12 @@ export default async function DoctorsPage() {
         <tbody>
           {data.doctors.map((doc) => (
             <tr key={doc.id} className="border-t border-line">
-              <td className="py-3.5 pr-4 text-ink">{doc.name}</td>
+              <td className="py-3.5 pr-4 text-ink">
+                <div className="flex items-center gap-3">
+                  <DoctorAvatar name={doc.name} size={28} />
+                  {doc.name}
+                </div>
+              </td>
               <td className="py-3.5 pr-4 text-ink-70">{doc.specialization.name}</td>
               <td className="py-3.5 pr-4 font-mono text-ink">₹{doc.consultationFee}</td>
               <td className="py-3.5 pr-4 font-mono text-ink">

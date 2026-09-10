@@ -1,6 +1,7 @@
 import { prisma } from "@/server/lib/prisma";
 import BookingWidget from "./BookingWidget";
 import SiteHeader from "@/components/SiteHeader";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 async function getDoctor(id: string) {
   return prisma.doctor.findUnique({
@@ -26,9 +27,14 @@ export default async function DoctorDetailPage({ params }: { params: Promise<{ i
     <div className="min-h-screen flex flex-col">
       <SiteHeader />
       <div className="max-w-2xl mx-auto px-6 py-14 w-full animate-in">
-        <p className="text-sm text-teal font-medium">{doctor.specialization.name}</p>
-        <h1 className="font-serif text-3xl text-ink mt-2">{doctor.name}</h1>
-        <p className="text-sm text-ink-70 mt-2">{doctor.qualification} · {doctor.experienceYears} years experience</p>
+        <div className="flex items-start gap-5">
+          <DoctorAvatar name={doctor.name} size={64} />
+          <div>
+            <p className="text-sm text-teal font-medium">{doctor.specialization.name}</p>
+            <h1 className="font-serif text-3xl text-ink mt-1">{doctor.name}</h1>
+            <p className="text-sm text-ink-70 mt-2">{doctor.qualification} · {doctor.experienceYears} years experience</p>
+          </div>
+        </div>
 
         <div className="mt-6 border border-line p-5 text-sm">
           <p className="text-ink font-medium">{doctor.clinic.name}</p>
