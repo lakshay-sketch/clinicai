@@ -2,6 +2,7 @@ import Link from "next/link";
 import SiteHeader from "@/components/SiteHeader";
 import { prisma } from "@/server/lib/prisma";
 import NearbySearch from "./NearbySearch";
+import { DoctorAvatar } from "@/components/DoctorAvatar";
 
 type Doctor = {
   id: string;
@@ -64,23 +65,26 @@ export default async function FindDoctorsPage({
             <Link
               key={doc.id}
               href={`/doctors/${doc.id}`}
-              className="block py-6 hover:bg-line/10 -mx-3 px-3 transition-colors"
+              className="flex gap-4 py-6 hover:bg-line/10 -mx-3 px-3 transition-colors"
             >
-              <div className="flex items-baseline justify-between">
-                <p className="text-ink font-medium">{doc.name}</p>
-                <p className="font-mono text-sm text-ink">₹{doc.consultationFee}</p>
-              </div>
-              <p className="text-sm text-ink-70 mt-1">
-                {doc.specialization.name} · {doc.experienceYears} yrs experience
-              </p>
-              <p className="text-sm text-ink-50 mt-0.5">
-                {doc.clinic.name}, {doc.clinic.area}
-              </p>
-              {doc.reviewCount > 0 && (
-                <p className="text-sm text-teal mt-2 font-mono">
-                  {doc.avgRating.toFixed(1)} · {doc.reviewCount} review{doc.reviewCount !== 1 ? "s" : ""}
+              <DoctorAvatar name={doc.name} size={44} />
+              <div className="flex-1">
+                <div className="flex items-baseline justify-between">
+                  <p className="text-ink font-medium">{doc.name}</p>
+                  <p className="font-mono text-sm text-ink">₹{doc.consultationFee}</p>
+                </div>
+                <p className="text-sm text-ink-70 mt-1">
+                  {doc.specialization.name} · {doc.experienceYears} yrs experience
                 </p>
-              )}
+                <p className="text-sm text-ink-50 mt-0.5">
+                  {doc.clinic.name}, {doc.clinic.area}
+                </p>
+                {doc.reviewCount > 0 && (
+                  <p className="text-sm text-teal mt-2 font-mono">
+                    {doc.avgRating.toFixed(1)} · {doc.reviewCount} review{doc.reviewCount !== 1 ? "s" : ""}
+                  </p>
+                )}
+              </div>
             </Link>
           ))}
         </div>
