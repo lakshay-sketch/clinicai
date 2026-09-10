@@ -7,8 +7,25 @@ import { Input } from "@/components/ui/Input";
 
 const SYMPTOM_NOTES_KEY = "clinicai_symptom_notes";
 
+declare global {
+  interface Window {
+    Razorpay: any;
+  }
+}
+
 function todayISO() {
   return new Date().toISOString().split("T")[0];
+}
+
+function loadRazorpayScript(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (window.Razorpay) return resolve();
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error("Failed to load payment script"));
+    document.body.appendChild(script);
+  });
 }
 
 export default function BookingWidget({ doctorId }: { doctorId: string }) {
@@ -18,6 +35,10 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
   const [loadingSlots, setLoadingSlots] = useState(false);
   const [booking, setBooking] = useState(false);
   const [result, setResult] = useState<{ success: boolean; message: string } | null>(null);
+
+  const [appointmentId, setAppointmentId] = useState<string | null>(null);
+  const [payState, setPayState] = useState<"idle" | "loading" | "paid" | "error">("idle");
+  const [payMessage, setPayMessage] = useState<string | null>(null);
 
   async function loadSlots() {
     setLoadingSlots(true);
@@ -56,12 +77,70 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
     if (json.success) {
       setResult({ success: true, message: `Booked for ${date} at ${startTime}.` });
       setSlots(null);
+      setAppointmentId(json.data.id);
+      setPayState("idle");
+      setPayMessage(null);
       try {
         localStorage.removeItem(SYMPTOM_NOTES_KEY);
       } catch {}
     } else {
       setResult({ success: false, message: json.error?.message ?? "Booking failed" });
       loadSlots();
+    }
+  }
+
+  async function payDeposit() {
+    if (!appointmentId) return;
+    setPayState("loading");
+    setPayMessage(null);
+
+    try {
+      await loadRazorpayScript();
+
+      const orderRes = await fetch(`/api/appointments/${appointmentId}/payment/create-order`, {
+        method: "POST",
+      });
+      const orderJson = await orderRes.json();
+
+      if (!orderJson.success) {
+        setPayState("error");
+        setPayMessage(orderJson.error?.message ?? "Could not start payment");
+        return;
+      }
+
+      const { orderId, amount, currency, keyId } = orderJson.data;
+
+      const rzp = new window.Razorpay({
+        key: keyId,
+        order_id: orderId,
+        amount,
+        currency,
+        name: "ClinicAI",
+        description: "Booking deposit",
+        theme: { color: "#1f6f6b" },
+        handler: async (response: any) => {
+          const verifyRes = await fetch(`/api/appointments/${appointmentId}/payment/verify`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(response),
+          });
+          const verifyJson = await verifyRes.json();
+          if (verifyJson.success) {
+            setPayState("paid");
+          } else {
+            setPayState("error");
+            setPayMessage(verifyJson.error?.message ?? "Verification failed");
+          }
+        },
+        modal: {
+          ondismiss: () => setPayState("idle"),
+        },
+      });
+
+      rzp.open();
+    } catch (err) {
+      setPayState("error");
+      setPayMessage(err instanceof Error ? err.message : "Something went wrong");
     }
   }
 
@@ -105,6 +184,22 @@ export default function BookingWidget({ doctorId }: { doctorId: string }) {
 
       {result && (
         <p className={`mt-5 text-sm ${result.success ? "text-teal" : "text-red"}`}>{result.message}</p>
+      )}
+
+      {appointmentId && payState !== "paid" && (
+        <div className="mt-4 p-4 border border-line-strong">
+          <p className="text-sm text-ink-70 mb-3">
+            Optional: pay a small deposit to secure your slot and help the clinic reduce no-shows.
+          </p>
+          <Button variant="secondary" onClick={payDeposit} disabled={payState === "loading"}>
+            {payState === "loading" ? "Opening payment…" : "Pay deposit"}
+          </Button>
+          {payMessage && <p className="mt-2 text-sm text-red">{payMessage}</p>}
+        </div>
+      )}
+
+      {payState === "paid" && (
+        <p className="mt-4 text-sm text-teal">Deposit paid — slot fully secured.</p>
       )}
     </div>
   );

@@ -208,6 +208,12 @@ enum AppointmentStatus {
   in_consultation
 }
 
+enum DepositStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
 model Appointment {
   id        String            @id @default(cuid())
   patientId String
@@ -218,6 +224,12 @@ model Appointment {
   startTime String?
   notes     String?
   createdAt DateTime          @default(now())
+
+  depositAmount     Int?
+  depositStatus     DepositStatus @default(PENDING)
+  razorpayOrderId   String?       @unique
+  razorpayPaymentId String?
+  paidAt            DateTime?
 
   patient    Patient     @relation(fields: [patientId], references: [id], onDelete: Restrict)
   doctor     Doctor      @relation(fields: [doctorId], references: [id], onDelete: Restrict)
