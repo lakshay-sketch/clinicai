@@ -39,7 +39,7 @@ async function getOverviewData() {
   const queueWaiting = waitingEntries.length;
   const avgWaitMinutes =
     queueWaiting > 0
-      ? Math.round(waitingEntries.reduce((s, e) => s + e.estimatedWaitMinutes, 0) / queueWaiting)
+      ? Math.round(waitingEntries.reduce((s, e) => s + (e.estimatedWaitMinutes ?? 0), 0) / queueWaiting)
       : null;
 
   const upcomingAppointments = await prisma.appointment.findMany({
