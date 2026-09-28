@@ -1,13 +1,23 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Show, UserButton } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 
 const DEFAULT_CLINIC_ID = "clinic_01";
 
+function navClass(active: boolean, transparent: boolean) {
+  const base = "text-xs uppercase tracking-widest pb-1 border-b transition-colors";
+  if (transparent) {
+    return `${base} ${active ? "text-paper border-paper/70" : "text-paper/80 hover:text-paper border-transparent"}`;
+  }
+  return `${base} ${active ? "text-ink border-teal" : "text-ink-70 hover:text-ink border-transparent"}`;
+}
+
 function StaffDashboardLink({ dark }: { dark?: boolean }) {
   const [isStaff, setIsStaff] = useState(false);
+  const pathname = usePathname() ?? "";
 
   useEffect(() => {
     fetch("/api/me")
@@ -21,16 +31,15 @@ function StaffDashboardLink({ dark }: { dark?: boolean }) {
   if (!isStaff) return null;
 
   return (
-    <Link
-      href="/dashboard"
-      className={`text-xs uppercase tracking-widest ${dark ? "text-paper/80 hover:text-paper" : "text-ink-70 hover:text-ink"}`}
-    >
+    <Link href="/dashboard" className={navClass(pathname.startsWith("/dashboard"), !!dark)}>
       Dashboard
     </Link>
   );
 }
 
 export default function SiteHeader({ transparent = false }: { transparent?: boolean }) {
+  const pathname = usePathname() ?? "";
+
   return (
     <header
       className={`sticky top-0 z-20 ${
@@ -47,15 +56,13 @@ export default function SiteHeader({ transparent = false }: { transparent?: bool
         <nav className="flex items-center gap-8">
           <Link
             href="/find"
-            className={`text-xs uppercase tracking-widest ${
-              transparent ? "text-paper/80 hover:text-paper" : "text-ink-70 hover:text-ink"
-            }`}
+            className={navClass(pathname.startsWith("/find") || pathname.startsWith("/doctors"), transparent)}
           >
             Find a Doctor
           </Link>
           <Link
             href={`/chat/${DEFAULT_CLINIC_ID}`}
-            className="text-xs uppercase tracking-widest text-teal hover:opacity-80"
+            className={navClass(pathname.startsWith("/chat"), transparent)}
           >
             Ask ClinicAI
           </Link>
@@ -72,12 +79,7 @@ export default function SiteHeader({ transparent = false }: { transparent?: bool
             </Link>
           </Show>
           <Show when="signed-in">
-            <Link
-              href="/my-appointments"
-              className={`text-xs uppercase tracking-widest ${
-                transparent ? "text-paper/80 hover:text-paper" : "text-ink-70 hover:text-ink"
-              }`}
-            >
+            <Link href="/my-appointments" className={navClass(pathname.startsWith("/my-appointments"), transparent)}>
               My Appointments
             </Link>
             <StaffDashboardLink dark={transparent} />
