@@ -1,5 +1,5 @@
 import crypto from "crypto";
-import { razorpay } from "@/server/lib/razorpay";
+import { getRazorpay } from "@/server/lib/razorpay";
 import { paymentRepo } from "@/server/repositories/payment.repo";
 import { ValidationError, NotFoundError } from "@/server/lib/errors";
 import type { Actor } from "@/server/middleware/withAuth";
@@ -26,7 +26,7 @@ export const paymentService = {
 
     const amount = calcDepositPaise(appointment.doctor.consultationFee);
 
-    const order = await razorpay.orders.create({
+    const order = await getRazorpay().orders.create({
       amount,
       currency: "INR",
       receipt: `appt_${appointmentId}`,
